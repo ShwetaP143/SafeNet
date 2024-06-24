@@ -1,0 +1,303 @@
+1. What is JavaScript?
+   Answer: JavaScript is a high-level, interpreted programming language that is used to make web pages interactive.
+
+2. What are the data types in JavaScript?
+   Answer: The data types in JavaScript are: number, string, boolean, null, undefined, object, and symbol (added in ES6).
+
+3. Explain the difference between `==` and `===` operators in JavaScript.
+   Answer: The `==` operator checks for equality after coercion, while the `===` operator checks for equality without type conversion.
+
+4. What is the purpose of the `let` keyword in JavaScript?
+   Answer: The `let` keyword is used to declare block-scoped variables in JavaScript.
+
+5. Explain the purpose of the `const` keyword in JavaScript.
+   Answer: The `const` keyword is used to declare constants that cannot be re-assigned or re-declared.
+
+6. What are the different types of errors in JavaScript?
+   Answer: The different types of errors in JavaScript are syntax errors, runtime errors, and logic errors.
+
+7. Explain the purpose of the `this` keyword in JavaScript.
+   Answer: The `this` keyword refers to the object that is currently executing the code.
+
+8. How do you create a new object in JavaScript?
+   Answer: Objects can be created using either object literals or the Object constructor.
+
+9. Explain the purpose of the `prototype` in JavaScript.
+   Answer: The `prototype` is used to add properties and methods to an object constructor function.
+
+10. How do you check if a variable is an array in JavaScript?
+    Answer: The `Array.isArray()` method is used to check if a variable is an array in JavaScript.
+
+11. Explain the purpose of the `map` method in JavaScript.
+    Answer: The `map` method is used to create a new array by applying a function to each element of an existing array.
+
+12. How do you remove an element from an array in JavaScript?
+    Answer: Elements can be removed from an array using methods like `splice()` or `filter()`.
+
+13. Explain the purpose of the `reduce` method in JavaScript.
+    Answer: The `reduce` method is used to apply a function against an accumulator and each element in the array to reduce it to a single value.
+
+14. What is a closure in JavaScript?
+    Answer: A closure is a function that has access to its own scope, the outer function's scope, and the global scope.
+
+15. Explain the purpose of the `bind` method in JavaScript.
+    Answer: The `bind` method is used to create a new function that, when called, has its `this` keyword set to a specific value.
+
+16. What are arrow functions in JavaScript?
+    Answer: Arrow functions are a concise way to write functions in JavaScript.
+
+17. Explain the purpose of the `async` and `await` keywords in JavaScript.
+    Answer: The `async` keyword is used to declare an asynchronous function, and the `await` keyword is used to pause the execution of an asynchronous function until a promise is settled.
+
+18. What is a Promise in JavaScript?
+    Answer: A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+19. How do you handle errors in Promises in JavaScript?
+    Answer: Errors in Promises can be handled using the `catch` method or by using `try...catch` blocks.
+
+20. Explain the purpose of the `fetch` API in JavaScript.
+    Answer: The `fetch` API is used to make network requests similar to XMLHttpRequest.
+
+21. What is event bubbling in JavaScript?
+    Answer: Event bubbling is a phenomenon where an event triggered on a nested element is propagated up to its parent elements.
+
+22. Explain the purpose of event capturing in JavaScript.
+    Answer: Event capturing is the process of triggering the event handlers on the parent elements before the event handlers on the target element.
+
+23. How do you prevent the default behavior of an event in JavaScript?
+    Answer: The `preventDefault()` method is used to prevent the default behavior of an event in JavaScript.
+
+24. What are event listeners in JavaScript?
+    Answer: Event listeners are functions that wait for a particular event to occur.
+
+25. Explain the purpose of the `localStorage` and `sessionStorage` objects in JavaScript.
+    Answer: The `localStorage` and `sessionStorage` objects are used to store key-value pairs in a web browser.
+
+26. How do you create a cookie in JavaScript?
+    Answer: Cookies can be created using the `document.cookie` property.
+
+27. Explain the purpose of the `setTimeout` and `setInterval` functions in JavaScript.
+    Answer: The `setTimeout` function is used to execute a function after a specified delay, and the `setInterval` function is used to repeatedly execute a function with a fixed time delay.
+
+28. How do you convert a string to a number in JavaScript?
+    Answer: The `parseInt()` or `parseFloat()` functions can be used to convert a string to a number in JavaScript.
+
+29. What are template literals in JavaScript?
+    Answer: Template literals are string literals allowing embedded expressions.
+
+30. Explain the purpose of the `splice` method in JavaScript.
+    Answer: The `splice` method is used to change the contents of an array by removing or replacing existing elements and/or adding new elements.
+
+31. How do you check if an object has a property in JavaScript?
+    Answer: The `hasOwnProperty()` method can be used to check if an object has a specific property.
+
+32. What is the purpose of the `filter` method in JavaScript?
+    Answer: The `filter` method is used to create a new array with elements that pass the test implemented by the provided function.
+
+33. Explain the purpose of the `querySelector` method in JavaScript.
+    Answer: The `querySelector` method is used to select the first element that matches a specified CSS selector.
+
+34. How do you create an object using a constructor function in JavaScript?
+    Answer: Objects can be created using constructor functions, which are regular functions that are used to create and initialize objects.
+
+35. What is the purpose of the `trim` method in JavaScript?
+    Answer: The `trim` method is used to remove whitespace from both ends of a string.
+
+36. Explain the purpose of the `charAt` method in JavaScript.
+    Answer: The `charAt` method is used to return the character at a specified index in a string.
+
+37. How do you convert a number to a string in JavaScript?
+    Answer: The `toString()` method can be used to convert a number to a string in JavaScript.
+
+38. What is the purpose of the `Object.keys` method in JavaScript?
+    Answer: The `Object.keys` method is used to return an array of a given object's own enumerable property names.
+
+39. Explain the purpose of the `Math.random` method in JavaScript.
+    Answer: The `Math.random` method is used to generate a random number between 0 (inclusive) and 1 (exclusive).
+
+40. How do you create a new array from an existing array in JavaScript?
+    Answer: A new array can be created from an existing array using methods like `slice()` or the spread operator.
+
+41. What is the purpose of the `startsWith` method in JavaScript?
+    Answer: The `startsWith` method is used to check if a string starts with
+
+ a specified character(s).
+
+42. How do you convert a string to uppercase in JavaScript?
+    Answer: The `toUpperCase()` method is used to convert a string to uppercase.
+
+43. Explain the purpose of the `toLocaleString` method in JavaScript.
+    Answer: The `toLocaleString` method is used to convert an object to a string, using a localized format.
+
+44. What are the different types of loops in JavaScript?
+    Answer: The different types of loops in JavaScript are `for` loops, `while` loops, and `do...while` loops.
+
+45. How do you break out of a loop in JavaScript?
+    Answer: The `break` statement is used to exit a loop.
+
+46. Explain the purpose of the `continue` statement in JavaScript.
+    Answer: The `continue` statement is used to skip the current iteration of a loop and continue to the next iteration.
+
+47. What is the purpose of the `forEach` method in JavaScript?
+    Answer: The `forEach` method is used to execute a provided function once for each array element.
+
+48. How do you sort an array in JavaScript?
+    Answer: The `sort` method is used to sort the elements of an array in place.
+
+49. What is the purpose of the `length` property in JavaScript arrays?
+    Answer: The `length` property is used to get or set the number of elements in an array.
+
+50. How do you check if a string contains a specific substring in JavaScript?
+    Answer: The `includes` method can be used to check if a string contains a specific substring.
+
+51. Explain the purpose of the `toLowerCase` method in JavaScript.
+    Answer: The `toLowerCase` method is used to convert a string to lowercase.
+
+52. How do you reverse a string in JavaScript?
+    Answer: Strings can be reversed using methods like `split()`, `reverse()`, and `join()`.
+
+53. What is the purpose of the `toUpperCase` method in JavaScript?
+    Answer: The `toUpperCase` method is used to convert a string to uppercase.
+
+54. How do you convert a string to lowercase in JavaScript?
+    Answer: The `toLowerCase` method is used to convert a string to lowercase.
+
+55. Explain the purpose of the `join` method in JavaScript.
+    Answer: The `join` method is used to join all elements of an array into a string.
+
+56. What is the purpose of the `lastIndexOf` method in JavaScript?
+    Answer: The `lastIndexOf` method is used to return the index within the calling string of the last occurrence of the specified value.
+
+57. How do you concatenate strings in JavaScript?
+    Answer: Strings can be concatenated using the `+` operator or template literals.
+
+58. What is the purpose of the `replace` method in JavaScript?
+    Answer: The `replace` method is used to replace a specified value with another value in a string.
+
+59. How do you split a string into an array in JavaScript?
+    Answer: The `split` method is used to split a string into an array of substrings.
+
+60. Explain the purpose of the `substring` method in JavaScript.
+    Answer: The `substring` method is used to extract characters from a string, between two specified indices.
+
+61. What is the purpose of the `indexOf` method in JavaScript?
+    Answer: The `indexOf` method is used to return the position of the first occurrence of a specified value in a string.
+
+62. How do you access characters in a string in JavaScript?
+    Answer: Characters in a string can be accessed using bracket notation or the `charAt` method.
+
+63. Explain the purpose of the `toFixed` method in JavaScript.
+    Answer: The `toFixed` method is used to format a number using fixed-point notation.
+
+64. What is the purpose of the `isNaN` function in JavaScript?
+    Answer: The `isNaN` function is used to determine whether a value is NaN (Not-A-Number).
+
+65. How do you convert a string to a date in JavaScript?
+    Answer: Dates can be created from strings using the `Date` object or by using libraries like Moment.js.
+
+66. Explain the purpose of the `Date` object in JavaScript.
+    Answer: The `Date` object is used to work with dates and times in JavaScript.
+
+67. What is the purpose of the `getFullYear` method in JavaScript?
+    Answer: The `getFullYear` method is used to get the year of a specified date.
+
+68. How do you get the current date and time in JavaScript?
+    Answer: The `Date` object is used to get the current date and time in JavaScript.
+
+69. Explain the purpose of the `toExponential` method in JavaScript.
+    Answer: The `toExponential` method is used to convert a number into an exponential notation.
+
+70. What is the purpose of the `toPrecision` method in JavaScript?
+    Answer: The `toPrecision` method is used to format a number to a specified length.
+
+71. How do you convert a number to a date in JavaScript?
+    Answer: Dates can be created from numbers using the `Date` object and the `getTime()` method.
+
+72. Explain the purpose of the `getDay` method in JavaScript.
+    Answer: The `getDay` method is used to get the day of the week for a specified date.
+
+73. What is the purpose of the `getTime` method in JavaScript?
+    Answer: The `getTime` method is used to get the numeric value corresponding to the time for a specified date.
+
+74. How do you compare dates in JavaScript?
+    Answer: Dates can be compared using comparison operators like `<`, `>`, `<=`, and `>=`.
+
+75. Explain the purpose of the `toDateString` method in JavaScript.
+    Answer: The `toDateString` method is used to convert a date to a more human-readable format.
+
+76. What is the purpose of the `setTimeout` function in JavaScript?
+    Answer: The `setTimeout` function is used to execute a function after a specified delay.
+
+77. How do you create a date in JavaScript with a specific year, month, and day?
+    Answer: The `Date` object can be used to create a date with a specific year, month, and day.
+
+78. Explain the purpose of the `toLocaleDateString` method in JavaScript.
+    Answer: The `toLocaleDateString` method is used to convert a date to a string, using a localized format.
+
+79. What is the purpose of the `getTimezoneOffset` method in JavaScript?
+    Answer: The `getTimezoneOffset` method is used to get the time-zone offset from UTC, in minutes, for the current locale.
+
+80. How do you set the time in a date object in JavaScript?
+    Answer: The `setHours`, `setMinutes`, `setSeconds`, and `setMilliseconds` methods can be used to set the time in a date object.
+
+81. Explain the purpose of the `setDate` method in JavaScript.
+    Answer: The `setDate` method is used to set the day of the month for a specified date.
+
+82. What is the purpose of the `toUTCString` method in JavaScript?
+    Answer: The `toUTCString` method is used to convert a date to a string, using the UTC time zone.
+
+83. How do you convert a date to a string in JavaScript?
+    Answer: The `toString` method can be used to convert a date to a string in JavaScript.
+
+84. Explain
+
+ the purpose of the `setFullYear` method in JavaScript.
+    Answer: The `setFullYear` method is used to set the full year for a specified date.
+
+85. What is the purpose of the `setMilliseconds` method in JavaScript?
+    Answer: The `setMilliseconds` method is used to set the milliseconds for a specified date.
+
+86. How do you add days to a date in JavaScript?
+    Answer: Days can be added to a date using the `setDate` method.
+
+87. Explain the purpose of the `setMonth` method in JavaScript.
+    Answer: The `setMonth` method is used to set the month for a specified date.
+
+88. What is the purpose of the `setTime` method in JavaScript?
+    Answer: The `setTime` method is used to set the time for a specified date, in milliseconds since January 1, 1970.
+
+89. How do you subtract dates in JavaScript?
+    Answer: Dates can be subtracted in JavaScript, and the result will be in milliseconds.
+
+90. Explain the purpose of the `toTimeString` method in JavaScript.
+    Answer: The `toTimeString` method is used to convert a date to a string, representing the time portion of the date.
+
+91. What is the purpose of the `setHours` method in JavaScript?
+    Answer: The `setHours` method is used to set the hour for a specified date.
+
+92. How do you find the number of days between two dates in JavaScript?
+    Answer: The difference between two dates can be calculated and converted to the number of days.
+
+93. Explain the purpose of the `setSeconds` method in JavaScript.
+    Answer: The `setSeconds` method is used to set the seconds for a specified date.
+
+94. What is the purpose of the `toISOString` method in JavaScript?
+    Answer: The `toISOString` method is used to convert a date to a string, in simplified extended ISO format (ISO 8601).
+
+95. How do you find the day of the week from a date in JavaScript?
+    Answer: The `getDay` method is used to find the day of the week from a date.
+
+96. Explain the purpose of the `setMinutes` method in JavaScript.
+    Answer: The `setMinutes` method is used to set the minutes for a specified date.
+
+97. What is the purpose of the `toISOString` method in JavaScript?
+    Answer: The `toISOString` method is used to convert a date to a string, in simplified extended ISO format (ISO 8601).
+
+98. How do you find the time difference between two dates in JavaScript?
+    Answer: The time difference between two dates can be calculated in milliseconds and then converted to the required units.
+
+99. Explain the purpose of the `setUTCDate` method in JavaScript.
+    Answer: The `setUTCDate` method is used to set the day of the month, according to the UTC time, for a specified date.
+
+100. What is the purpose of the `toJSON` method in JavaScript?
+    Answer: The `toJSON` method is used to convert a date to a string, using a JSON format.

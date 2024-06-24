@@ -1,0 +1,612 @@
+General Relational DBMS Interview Questions
+Q) What is a candidate key?
+
+Q) What are alternate keys?
+
+Q) What is a primary key?
+------ -----------------------
+Employee (
+    Employee ID, 
+    FullName, 
+    SSN, 
+    DeptID
+)
+
+1. Candidate Key: are individual columns in a table that qualifies for uniqueness of all the rows. Here in Employee table EmployeeID & SSN are Candidate keys.
+
+2. Primary Key: is the columns you choose to maintain uniqueness in a table. Here in Employee table you can choose either EmployeeID or SSN columns, EmployeeID is preferable choice,
+                as SSN is a secure value.
+
+3. Alternate Key: Candidate column other the Primary column, like if EmployeeID is PK then SSN would be the Alternate key.
+
+4. Super Key: If you add any other column/attribute to a Primary Key then it become a super key, like EmployeeID + FullName is a Super Key.
+
+5. Composite Key: If a table do have a single columns that qualifies for a Candidate key, then you have to select 2 or more columns to make a row unique. Like if there is no EmployeeID or SSN columns, then you can make FullName + DateOfBirth as Composite primary Key. But still there can be a narrow chance of duplicate row.
+------ -----------------------
+
+Q) What is the difference between a primary key and a unique key? Are they the same?
+Primary Key
+-----------
+-Primary key cannot have a NULL value.
+-Each table can have only one primary key.
+-By default, Primary key is clustered index, and the data in database table is physically organized in the sequence of clustered index.
+-Primary key can be related to another tables as a Foreign Key.
+-We can generate ID automatically with the help of Auto Increment field. Primary key supports Auto Increment value.
+-We can define Primary key constraint on temporary table and table variable. 
+-We can't delete primary key value from the parent table which is used as a foreign key in child table. To delete we first need to delete that primary key value from the child table.
+
+Unique Key
+----------
+-Unique Constraint may have a NULL value.
+-Each table can have more than one Unique Constraint.
+-By default, Unique key is a unique non-clustered index.
+-Unique Constraint can not be related with another table's as a Foreign Key.
+
+Foreign Key
+-----------
+-Foreign key is a field in the table that is Primary key in another table.
+-Foreign key can accept multiple null value.
+-Foreign key do not automatically create an index, clustered or non-clustered. You can manually create an index on foreign key.
+-We can have more than one foreign key in a table.
+-Foreign keys do not automatically create an index, clustered or non-clustered. You must manually create an index on foreign keys.
+-There are actual advantages to having a foreign key be supported with a clustered index, but you get only one per table. What's the advantage? If you are selecting the parent plus all child records, you want the child records next to each other. This is easy to accomplish using a clustered index.
+-Having a null foreign key is usually a bad idea instead of NULL  referred to as "orphan record".
+-We can’t define foreign key constraint on temporary table or table variable.
+-We can delete the foreign key value from the child table even though that refers to the primary key of the parent table.
+
+
+Q) What is referential integrity?
+
+	Referential integrity refers to the accuracy and consistency of data within a relationship.
+
+	In relationships, data is linked between two or more tables. This is achieved by having the foreign key (in the associated table) reference a primary key value (in the primary – or parent – table). Because of this, we need to ensure that data on both sides of the relationship remain intact.
+
+	So, referential integrity requires that, whenever a foreign key value is used it must reference a valid, existing primary key in the parent table.
+
+	Example
+	-------
+	For example, if we delete record number 15 in a primary table, we need to be sure that there’s no foreign key in any related table with the value of 15. We should only be able to delete a primary key if there are no associated records. Otherwise, we would end up with an orphaned record.
+
+Q) What is an Entity-Relationship Diagram (ERD)?
+
+An entity-relationship diagram (ERD) is a data modeling technique that graphically illustrates an information system’s entities and the relationships between those entities. An ERD is a conceptual and representational model of data used to represent the entity framework infrastructure.
+
+The elements of an ERD are:
+---------------------------
+Entities
+Relationships
+Attributes
+
+Steps involved in creating an ERD include:
+------------------------------------------
+1. Identifying and defining the entities
+2. Determining all interactions between the entities
+3. Analyzing the nature of interactions/determining the cardinality of the relationships
+4. Creating the ERD
+
+Q) What is a subquery?
+A Subquery or Inner query or a Nested query is a query within another SQL query and embedded within the WHERE clause.
+A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.
+Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN, etc.
+
+Q) What is a correlated subquery?
+
+34
+down vote
+accepted
+Correlated Subquery is a sub-query that uses values from the outer query. In this case the inner query has to be executed for every row of outer query.
+
+Simple subquery doesn't use values from the outer query and is being calculated only once:
+
+See example here
+----------------
+SELECT id, first_name 
+FROM student_details 
+WHERE id IN (SELECT student_id
+FROM student_subjects 
+WHERE subject= 'Science');
+
+Q) How do you use a subquery to find records that exist in one table and do not exist in another?
+	SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls WHERE ID IS NOT NULL)
+	--> That worked because we eliminated the NULL values in the subquery
+	
+Q) What does it mean to normalize a database and why would you do it?
+
+Database normalization, or data normalization, is a technique to organize the contents of the tables for transactional databases and data warehouses. Normalization is part of successful database design; without normalization, database systems can be inaccurate, slow, and inefficient, and they might not produce the data you expect.
+
+Q) What is denormalization?
+
+Denormalization is a database optimization technique in which we add redundant data to one or more tables. This can help us avoid costly joins in a relational database. Note that denormalization does not mean not doing normalization. It is an optimization technique that is applied after doing normalization.
+
+In a traditional normalized database, we store data in separate logical tables ad attempt to minimize redundant data. We may strive to have only one copy of each piece of data in database.
+For example, in a normalized database, we might have a Courses table and a Teachers table.Each entry in Courses would store the teacherID for a Course but not the teacherName. When we need to retrieve a list of all Courses with the Teacher name, we would do a join between these two tables.
+In some ways, this is great; if a teacher changes is or her name, we only have to update the name in one place.
+The drawback is that if tables are large, we may spend an unnecessarily long time doing joins on tables.
+Denormalization, then, strikes a different compromise. Under denormalization, we decide that we’re okay with some redundancy and some extra effort to update the database in order to get the efficiency advantages of fewer joins.
+------------ Link ---------> https://www.geeksforgeeks.org/denormalization-in-databases/
+
+Design and Programming Interview Questions
+ Q) How can I detect whether a given connection is blocked?
+ ---> 
+ 
+Q) How would you design a database for an online site, which would average a million hits a day?
+ ---> 
+ 
+Q) You are testing the performance of a query The first time you run the query, the performance is slow  The second time you run the query, the performance is fast  Why is this?
+  1) It takes CPU time to figure out how to run a query. SQL Server uses memory to cache execution plans to save time the next time you run the query.
+  2) It takes time to read data from disk. SQL Server uses memory to cache data in the Buffer Pool so it doesn’t have to go to disk the next time you use that data.
+  
+Q) What you can do to remove data from the cache and query plans from memory for testing the performance of a query repeatedly?
+1. DBCC DROPCLEANBUFFERS clears clean (unmodified) pages from the buffer pool
+2. Precede that with a CHECKPOINT to flush any dirty pages to disk first
+3. DBCC FLUSHPROCINDB clears execution plans for that database
+
+Q) What is wrong in the following SQL statement?
+
+Q) Write the fastest query to find out how many rows exist in a table
+ SELECT COUNT(*) FROM MyBigtable WITH (NOLOCK)
+
+Q) The COUNT() function always returns a int value type What should you do if you need to count rows from a query which you know will return a value that is too large for an int value type?
+
+Q) What is a derived table?
+ --> A derived table is a technique for creating a temporary set of records which can be used within another query in SQL. You can use derived tables to shorten long queries, or even just to break a complex process into logical steps.
+ 
+Q) You have a table with three columns: Amount1, Amount2, and Amount3 In a single row only one of these three columns will have a value and the other two will be null  Write a SQL query to retrieve the values from these columns
+
+Q) How can you fix a poorly performing query?
+1. Look at the execution plan in query analyzer
+2. See what step costs the most
+3. Optimize the step!
+4. Return to step 1 [thx to Vinko]
+
+Q) What is the physical representation for a many-to-many relationship?
+--> A database used by a school application can be taken as an example. Two of the tables it contains are "Student" and "Subject." In real life, a student will take several subjects simultaneously, while a subject will be studied by several students at a time. This is a many-to-many relationship.
+
+Q) What is the maximum length of an extended property?
+--> Extended properties have a size limitation is 7,500 bytes.
+
+Q) In which database can extended stored procedures be added?
+
+Q) Why does this query return 0?
+
+Q) If a column is an image value type, how you can compare column values? How can you use this column in join clause?
+--> Convert the image field to 'varbinary' to do your comparison.
+
+--> create table foo(img image)
+--> select * from foo a, foo b WHERE convert(varbinary,a.img) = convert(varbinary,b.img)
+
+Q) Which data type cannot be used as a parameter in a UDF?
+
+Q) Which four data types cannot be used as a return type from a user-defined function?
+
+Q) Can an extended stored procedure be called from inside a user-defined function?
+
+Q) How you can make a parameterized view?
+
+Q) How long can an Error message be in RAISEERROR function?
+
+Q) What are the constraints on severity level in RAISEERROR?
+
+Q) How can you log an error to the server event log from a stored procedure?
+
+Q) Explain the Rollup operator
+
+Q) Explain the Cube operator
+
+Q) What is an application role and explain a scenario when you would use one?
+
+Q) On Friday, you issued several INSERT statements using Query Analyzer. You then verified the data had been correctly entered with a SELECT statement  On Monday, your users report that the data is not there  What happened?
+
+Q) You have two tables with a one to many join based on a field named ID. You need to find records in the parent table that are not represented in the child table  How would you accomplish this?
+
+SQL Interview Questions For Experienced
+Q) Give an example of why you would want to denormalize a database
+
+Q) Explain extended properties
+
+Q) You have couple of stored procedures that depend on a table You dropped the table and recreated it  What do you have to do to reestablish those stored procedure dependencies?
+
+Q) How can you append an identity column to a temporary table?
+
+Q) You schedule a job to run every minute What will happen if the first job runs more than 1 min? Will the second instance of the job start?
+
+Q) Why should you use or avoid SELECT * … statements?
+
+Q) What is wrong with this statement?
+
+Q) You have several tables, and they are joined together for querying. The tables contain both clustered indexes and non clustered indexes  To optimize performance, how should you distribute the tables and their indexes onto different file groups?
+
+Q) Which event (Check constraints, Foreign Key, Rule, Trigger, Primary key check) will be performed last for an integrity check?
+
+Q) What is the fastest way to permanently delete a 1 million row table named customers?
+
+Q) After removing a table from database, what other related objects have to be dropped explicitly?
+
+Q) You want to check the syntax of a complicated Update SQL statement without executing it. What command should you use?
+
+Q) You are the database developer for a leasing company. Your leasing database includes a lease table that has a column which keeps Social security numbers  Each SSN must be unique  You want the data to be physically stored in order by SSN  What constraint should you add to the SSN column on the lease table?Q) You are designing a database for your company Your Company has 10 departments and each
+
+Q) You are designing a database for your company Your Company has 10 departments and each department has between 25 to 100 employees  Each employee may work for one or more departments  How can you represent this relationship in your ERD (entity relationship diagram)?
+
+Q) Mary’s company is a research company that does experiments Mary’s company database includes an Experiment table  The Experiments table stores all the Experiments and their ID  There is also a Project table, which keeps all the Projects with their ID  How should the database be designed, so that an experiment cannot be repeated in a Project, but a single experiment can belong to more than one Project?
+
+Q) John exports information periodically from a Microsoft SQL Server database to an Oracle Database  What is the best way to do this?
+
+Q) You are designing a database for your human resources department In the employee table, there is a field for Social Security Number, which cannot contain NULL values  If no value is given, you want a value of UNKNOWN to be inserted in this field  What is the best approach?
+
+Q) Is it true that rules do not apply to data already existing in a database at the time the rule is created?
+
+Q) Is it true, that there is no difference between a rule and a check constraint?
+
+Q) Can a rule be bound to any column of any data type?
+
+Q) You are responsible for designing the physical architecture of an OLTP system. You have two tables TableA and TableB that will be joined together by several queries  You need good reliability and high performance for these queries  What should you do?Q) What is RAID, and how it can influence database performance?
+
+Q) What is RAID, and how it can influence database performance?
+
+Q) You work at the corporate office of a Fortune 500 company that has regional offices in 100 countries  Each regional office maintains its own customer table  This information needs to be brought to the corporate office and merged, to do some analysis for the marketing department  The marketing department also needs to uniquely identify each customer  How should you design the customer table?
+
+Q) Explain the DBCC PINTABLE command When would you use it?
+
+Q) You have to design a database for a manufacturing plant Among other things, this database maintains the attendance of the workshop employees who work in 3 shifts  The Attendance table should have a field named ‘Shift’, which stores the shift that the employee worked  The Workshop supervisor should be able to input only 1, 2 or 3 in this field  What is the best design, to implement this requirement?
+
+SQL Interview Questions For 5+ Years Experienced
+Q) What is a transaction and why is it important?
+
+Q) What is deadlock?
+
+Q) What is a livelock?
+
+Q) How you can minimize the deadlock situation?
+
+Q) What is the importance of concurrency control?
+
+Q) Define Joins
+
+Q) What is an outer join?
+
+Q) Define a cross join?
+
+Q) How you can change a cross join into an inner join?
+
+Q) Define constraints and give an example of their use?
+
+Q) Write a SQL Query to sort on different column name according to the parameters passed in the Function?
+
+Q) What is the downside of using UDF?
+
+Q) You have a stored procedure, which execute a lengthy batch job. This stored procedure is called from a trigger  You do not want to slow the data entry process  You do not want trigger to wait for this batch job to finish before it completes itself  What you can do to speed up the process?
+
+Q) Write a SQL Query to delete duplicate records from a table called TABLE1
+
+Q) What is an index?
+
+Q) What is the preferred way to create a clustered and non-clustered index? Which index should you create first the clustered or non-clustered?
+
+Q) Can a unique index be created on a column, which contains NULL?
+
+Q) How would you choose between a clustered and a non-clustered index?
+
+Q) Your table has a large character field There are queries that use this field in their search clause What should you do?
+
+Q) What is a fill factor?
+
+Q) When you should use a low fill factor?
+
+Q) What are statistics?
+
+Q) What is clustering?
+
+Q) What is the difference between DBCC INDEXDEFRAG and DBCC REINDEX?
+
+Q) How you can find out if an index is useful to the optimizer?
+
+Q) Where are full-text indexes stored?
+
+Q) How many full-text indexes can a table have?
+
+Q) Indexes are updated automatically Is the full-text index also updated automatically?
+
+Q) How is a full-text index updated?
+
+Q) Can you force a query to use a specific Index?
+
+Q) Which data type columns are the best candidates for full-text indexing?
+
+Q) When would you prefer to have a minimum number of indexes?
+
+Q) You created a table as follows
+
+How you would rewrite the SQL Query to return the CUSTOMERID sorted numerically?
+
+Q) Why is there a performance difference between two similar queries where one uses UNION and the other uses UNION ALL?
+
+Q) You have a table ‘test’ which is a copy of northwind employee table You have written a trigger to update the field ‘HireDate’ with the current date
+
+Q) What is the difference between OPENROWSET and OPENQUERY?
+
+Q) How you can add messages to the NT event log from within a stored procedure?
+
+Q) What are three ways you can use an identity value inside a trigger? Why would you prefer one way over another?
+
+SQL Server View Interview Questions
+Q) List some of the rules that apply to creating and using a ‘view’
+
+Q) You added a row to a view, but the row is not shown on the view. Explain how this can happen, and how you can remedy the situation
+
+Q) Can an ORDER BY clause be used in a creation of a view?
+
+Q) ‘Order by’ is not allowed in a view How can you sort information from a view?
+
+Q) What is a derived Table?
+
+Q) What are Information Schema Views?
+
+Q) What is a partitioned view?
+
+Q) What is an Indexed View?
+
+SQL Server Administration Interview Questions
+ Q) How you can get a list of all the table constraints in a database?
+
+Q) How you can get the list of largest tables in a database?
+
+Q) How you can move data or databases between servers and databases in SQL Server?
+
+Q) If no size is defined while creating the database, what size will the database have?
+
+Q) Can a database be shrunk with users active?
+
+As a general practice, it is recommended to have dbo be the owner of all database objects However, in your database you find number of tables owned by a user other than dbo, how could you fix this?
+
+Q) Why does a SQL statement work correctly outside of a user-defined function, but incorrectly inside it?
+
+Q) Can a table be moved to different Filegroup?
+
+Q) Can a database be shrunk to 0 Bytes, if not, why?
+
+Q) What does the Automatic recovery do?
+
+Q) Can an automatic recovery be initiated by a user?
+
+Q) What is the primary use of the model database?
+
+Q) What information is maintained within the msdb database?
+
+Q) What stored procedure can you use to display the current processes?
+
+Q) What stored procedure would you use to view lock information?
+
+Q) How can a database be repaired?
+
+Q) How can you find out if the current user is a member of the specified Microsoft® Windows NT® group or Microsoft SQL Server™ role?
+
+Q) Your SQL Server is running out of disk space. You notice that there are several large files with LDF extensions  What are these files?
+
+Q) You notice that the transaction log on one of your databases is over 4GB The size of the data file is 2MB  What could cause this situation, and how can you fix it?
+
+Q) You accidentally delete the MSDB database What effect does this have on your existing SQL databases, and how do you recover?
+
+Q) Where can you add custom error messages to SQL Server?
+
+Q) Is it important for a Database Administrator to understand the operating system and file access?
+
+Q) What is the difference between writing data to mirrored drives versus RAID5 drives
+
+Q) In the physical file layout, where should the transaction log be stored in relation to the data file?
+
+Q) You have separate development and production systems You want to move a copy of a development database into production  To do this, you do a backup on the development system and restore to the production system  After a few minutes, you begin getting calls from several customers saying that they are denied access to the system  Why?
+
+Q) What is a mixed extent?
+
+Q) You have a table with close to 100 million records Recently, a huge amount of this data was updated  Now, various queries against this table have slowed down considerably  What is the quickest option to remedy the situation?
+
+Q) How can you check the level of fragmentation on a table?
+
+Q) You have developed an application which uses many stored procedures and triggers to update various tables  Users ocassionally get locking problems  Which tool is best suited to help you diagnose the problem?
+
+Q) Which table keeps the locking information?
+
+Q) You want to be sure that queries in a database always execute at the maximum possible speed. To achieve this goal you have created various indexes on tables  Which other statement will keep the database in good condition?
+
+Advanced SQL Server Interview Questions
+Q) During a recent migration project, John inserted 10,000 records in a table that has an Identity Column called ticketID, which automatically increases by 1 each time a record is inserted in the table  A month after the database went live; John noticed that record with ticketID 5123 has some incorrect information  So John deletes this record and decides to re-insert this record in the table  He wants to re-use the ticketID 5123  He needs to achieve this while the database is in production  What should he do?
+
+Q) Jenny wants to export data to Pivot table in Excel spreadsheet from a table in SQL Server This data changes frequently  She wants to automate the process of updating the Excel spreadsheet using the SQL Job Scheduler  What tool is the best choice for the task?
+
+Q) You have written an application in VB which uses SQL 7 for its database You have used many stored procedure and triggers to make your application fast  However, users complain that saving records take too much time  To rectify the problem, you start the profiler and create a trace using the trace wizard  How would you go about identifying the cause of the problem?
+
+Q) You have a table with employee information that rarely changes However this table is used from many applications in the organization to validate the data and to produce reports  What would be the optimal fill factor to choose for indexes created on this table?
+
+Q) What is the difference between a fill factor of 100 and 0?
+
+Q) How will you know when statistics on a table are obsolete?
+
+Q) Explain different backup plans
+
+Q) What is a full backup?
+
+Q) Explain a differential backup
+
+Q) Explain an incremental backup
+
+Q) What is Log shipping?
+
+Q) Every night you run a full backup After every 3 three hours you make a differential backup  Every hour you make an incremental backup  In a worst-case scenario, how much work you can lose?
+
+Q) Explain a Checkpoint?
+
+Q) Explain an Automatic Checkpoint
+
+Q) How you can list all the tables in a database?
+
+Q) How can you list all the columns in a database?
+
+Q) How can you list all the table constraints in a database?
+
+Q) What are the advantages DTS has over bcp?
+
+Q) How do you rebuild an identity column?
+
+Q) Create a DTS package to produce a text file using the ‘UPDATE STATISTICS’ command for the tables in a database with obsolete statistics.
+
+Q) How can you transfer data from a text file to a database table? Or how can you export data from a table to a comma delimited (CSV) file? Or how can you import data from MS Access to a table in a database? Or how can you export data from a table to an Excel file?
+
+Q) When does the auto update index statistics feature in SQL server turn itself on?Q) What specific conditions database should meet, before you can Bulk copy data into it using BCP
+
+Q) What specific conditions database should meet, before you can Bulk copy data into it using BCP
+
+SQL Server Replication Interview Questions
+ Q) What is database replication? What are the different types of replication you can set up in SQL Server?
+
+Q) Which database stores information about replication?
+
+Q) Your company has 50 branches all over the country All the branches, including the Head Office have SQL Server as the database  Every night all 50 branches upload certain information to the Head Office  Which Replication topology is best suited for the above scenario?
+
+Q) Which of the following option(s) is(are) an inappropriate usage of merge replication: a company time sheet database, a static look up table, a high transaction based application that requires real time replication to subscribers or a company information price list that is updated at remote sites and replicated to a central databaseQ) What are the restraints imposed on the table design by a Merge Replication?
+
+Q) What are the restraints imposed on the table design by a Merge Replication? 
+
+SQL Server Security Interview Questions
+ Q) A user is a member of the Public role and the Sales role  The Public role has select permission on all the tables  The Sales role does not have select permission on some of the tables  Will the user be able to select from all tables?
+
+Q) If a user does not have permission to a table, but has permission to a view created on it, will he be able to view the data in table?
+
+Q) Tony works in the Sales Department and has created a table named OrderDetail for the Sales department  You write a stored procedure which will help Mark, a sales representative, update the OrderDetail table  However, when Mark uses the stored procedure he gets an error  You realize that this is a security issue  What is required to enable Mark to use your stored procedure?
+
+SQL Transactions Interview Questions
+ Q) Define Concurrency Control
+
+Q) What is Pessimistic Concurrency Control?
+
+Q) What is Optimistic Concurrency Control?
+
+Q) Explain Isolation levels
+
+Q) What is the difference between the REPEATABLE READ and SERIALIZABLE isolation levels?
+
+Q) What is the default isolation level in SQL server?
+
+Q) What is the most restrictive isolation level?
+
+Q) What is the least restrictive isolation level?
+
+Q) How do you determine the current isolation level?
+
+Q) What are the conditions an underlying table must satisfy before a cursor can be used by a positioned UPDATE or DELETE statement?
+
+Q) Explain Locks
+
+Q) Explain Lock escalation
+
+Q) Under what condition it is possible to have a page level lock and row lock at the same time for a query?
+
+Q) Explain how to use transactions efficiently
+
+SQL Triggers Interview Questions
+ Q) What you can do to delete a table without the delete trigger firing?
+
+Q) Other than Truncate statement, which other command can by-pass the trigger on the tables?
+
+Q) What are the differences between Triggers and Stored Procedures?
+
+Q) Is this statement true: A trigger can reference objects outside the current database?
+
+Q) Can a trigger be created on a view?
+
+Q) Will the WRITETEXT statement activate a trigger?
+
+Q) Can a table be created inside a Trigger?
+
+Q) When should you use an INSTEAD OF trigger?
+
+Q) Can the “If Update (colName)” statement be used in a delete trigger? 
+
+Stored Procedures Interview Questions
+ Q) Why should one not prefix user stored procedures with ‘sp_’?
+
+Q) What are the results of running this script?
+
+Q) Which table keeps information about Stored Procedures?
+
+Q) What will be the value of @@FETCH_STATUS if a row that was a part of the cursor resultset has been deleted from the database after the time the stored procedure that opened the cursor was executed?Q) Why and when do stored procedure recompile?
+
+Q) Why and when do stored procedure recompile?
+
+Q) How can you find out which stored procedures are recompiling?
+
+Q) How can you stop stored procedures from recompiling?
+
+SQL CURSORS INTERVIEW QUESTIONS
+ Q) How many types of cursor type are there?
+
+Q) What is the difference between insensitive and scroll cursor?
+
+Q) If a table does not have a unique index, can a cursor be opened on it?
+
+Q) Can a cursor be updated? If yes, how you can protect which columns are updated?
+
+Q) While using a cursor, how can you differentiate between a deleted row and a row that has been inserted with NULL data values?
+
+Concept-Based SQL Interview Questions
+Q) How can you know if the row fetched from cursor is still valid in underlying table?
+
+Q) How can you find out how many rows returned in a cursor?
+
+Q) What does it mean if @@CURSOR_ROW returns a negative number?
+
+Q) How can you set the threshold at which SQL Server will generate keysets asynchronously?
+
+Q) What is the difference between Deallocate cursor and Close cursor?
+
+Q) Define Cursor Locking
+
+SQL Server Datatypes Interview Questions
+Q) Between Cast and Convert which function would you prefer and why?
+
+Q) What are the new data types are introduced in SQL 2000?
+
+Q) Why it is recommended to avoid referencing a floating point column in the WHERE clause?
+
+Q) You have to store user responses of ‘Yes’ and ‘No’ What kind of data type is best suited for this task?
+
+Q) What is the Exact Numeric data type in SQL?
+
+Q) Explain timestamp datatype?
+
+Q) How can a user-defined datatype be created?
+
+Q) What are the approximate numeric data types?
+
+Q) You are creating an application where Users are asked their gender In the gender combo box you have three options: ‘Male’ , ‘Female’ and ‘I choose not to disclose’  These options are stored in the table as 1, 0 or NULL  Which datatype should you use?
+
+Q) Which data types generate inaccurate results if used with an = or <> comparison in a WHERE clause of a SQL statement?
+
+Q) Beginning with SQL Server Version 7 0, a new enhanced data type nchar was added What type of data is supported with this data type?
+
+Q) What will happen if a column containing char type data is changed to the nchar data type?
+
+Q) To automatically record the time on which the data was modified in a table, which data type should you choose for the column?
+
+XML in SQL Server Interview Questions
+ Q) What is XDR?
+
+Q) What is the difference between FOR AUTO and FOR NESTED?
+
+Q) What is the difference between FOR XML RAW and FOR XML AUTO?
+
+Q)Explain FOR XML EXPLICIT Mode?
+
+Q) Using the Customer, and Order table in Northwind database, Please write a query to produce XML?
+
+Q) What is XML Schema?
+
+Q) What is mapping schema?
+
+Q) You have a table ‘customers’ , which has three fields, Address, CustomerID and ContactName You would like to retrieve rows as follows:
+
+Q) What is XPath?
+
+Q) What keyword you will use to get schema appended to the result set of a ‘for XML’ query?
+
+Q) Explain Active/Passive and Active/Active cluster configurations?

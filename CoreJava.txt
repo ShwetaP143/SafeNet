@@ -1,0 +1,977 @@
+Core Java Interview Questions
+What Do You Mean By Platform Independence?
+Are Jvm’s Platform Independent?
+	-> NO
+What Is A Jvm?
+What Is The Difference Between A Jdk And A Jvm?
+What Is A Pointer And Does Java Support Pointers?
+What Is The Base Class Of All Classes?
+	-> Object class
+Does Java Support Multiple Inheritance?
+	-> NO
+Is Java A Pure Object Oriented Language?
+	-> Java is not because it supports Primitive datatype such as int, byte, long... etc, to be used, which are not objects.
+Are Arrays Primitive Data Types?
+	-> No,because primitive data type is  a data type which is direclty accessble by the operating system or which is predfined.like int,char,boolean. but Array derived from the primitve data type.so it is Non primitve data types.
+What Is Difference Between Path And Classpath?
+	-> Path is an environment variable which is used by the operating system to find the executables. Classpath is an environment variable which is used by the Java compiler to find the path
+What Are Local Variables?
+	-> A local variable in Java is a variable that's declared within the body of a method. 
+What Are Instance Variables?
+	-> Instance variable in java are used by Objects to store their states. Variables which are defined without the STATIC keyword and are Outside any method declaration are Object specific and are known as instance variables.
+How To Define A Constant Variable In Java?
+
+Should A Main Method Be Compulsorily Declared In All Java Classes?
+	-> main() method is not mandatory to declare in all the java classes but It must be created in the classes which you want to be executable or say the classes from where your application will execute. ... main() method is declare on single class that should be entry point of java program.
+What Is The Return Type Of The Main Method?
+	-> void
+Why Is The Main Method Declared Static?
+What Is The Arguement Of Main Method?
+	-> in Java args contains the supplied command-line arguments as an array of String objects.
+Can A Main Method Be Overloaded?
+	-> YES
+Can A Main Method Be Declared Final?
+	-> Ya we can declare it as final , but declaring it as final is of no use and also no error will be reported by JVM.
+Does The Order Of Public And Static Declaration Matter In Main Method?
+	->  No. It doesn't matter but void should always come before main().
+Can A Source File Contain More Than One Class Declaration?
+	-> Yes, it can. However, there can only be one public class per .java file, as public classes must have the same name as the source file. One Java file can consist of multiple classes with the restriction that only one of them can be public.
+What Is A Package?
+Which Package Is Imported By Default?
+	-> java.lang package is imported by default
+Can A Class Declared As Private Be Accessed Outside It’s Package?
+	-> Not possible.
+Can A Class Be Declared As Protected?
+	-> The protected access modifier cannot be applied to class and interfaces. Methods, fields can be declared protected, however methods and fields in a interface cannot be declared protected.
+What Is The Access Scope Of A Protected Method?
+	-> A protected method can be accessed by the classes within the same package or by the subclasses of the class in any package.
+What Is The Purpose Of Declaring A Variable As Final?
+	-> A final variable's value can't be changed. final variables should be initialized before using them.
+What Is The Impact Of Declaring A Method As Final?
+	-> A method declared as final can't be overridden. A sub-class can't have the same method signature with a different implementation.
+I Don’t Want My Class To Be Inherited By Any Other Class. What Should I Do?
+	-> You should declared your class as final. But you can't define your class as final, if it is an abstract class. A class declared as final can't be extended by any other class.
+Can You Give Few Examples Of Final Classes Defined In Java Api?
+	-> java.lang.String, java.lang.Math are final classes.
+How Is Final Different From Finally And Finalize?
+Can A Class Be Declared As Static?
+	-> Firstly you cannot make top-level-class static. you can only make a nested class static. By making an nested class static you basically are saying that you don't need an instance of the nested class to use it from your outer class/top-level-class.
+When Will You Define A Method As Static?
+	-> When a method needs to be accessed even before the creation of the object of the class then we should declare the method as static.
+What Are The Restriction Imposed On A Static Method Or A Static Block Of Code?
+I Want To Print “hello” Even Before Main Is Executed. How Will You Acheive That?
+What Is The Importance Of Static Variable?
+Can We Declare A Static Variable Inside A Method?
+	-> No
+What Is An Abstract Class And What Is It’s Purpose?
+	-> Abstract classes are classes that contain one or more abstract methods. An abstract method is a method that is declared, but contains no implementation. Abstract classes may not be instantiated, and require subclasses to provide implementations for the abstract methods.
+Can A Abstract Class Be Declared Final?
+	-> No
+What Is Use Of A Abstract Variable?
+	-> There is nothing like 'abstract variable' in Java. We have 'abstract classes' and 'abstract methods'.
+Can You Create An Object Of An Abstract Class?
+	-> NO. Because Abstract Class is not a complete class, it only acts like a model for the actual classes.It can also have one or more abstract methods.
+Can A Abstract Class Be Defined Without Any Abstract Methods?
+	-> Yes it's possible. This is basically to avoid instance creation of the class.
+Class C Implements Interface I Containing Method M1 And M2 Declarations. Class C Has Provided Implementation For Method M2. Can I Create An Object Of Class C?
+	-> No not possible. Class C should provide implementation for all the methods in the Interface I. Since Class C didn't provide implementation for m1 method, it has to be declared as abstract. Abstract classes can't be instantiated.
+----------------------------------------------------------
+Java Interview Questions for 2 Years Experience
+Can A Method Inside A Interface Be Declared As Final?
+Can An Interface Implement Another Interface?
+Can An Interface Extend Another Interface?
+Can A Class Extend More Than One Class?
+Why Is An Interface Be Able To Extend More Than One Interface But A Class Can’t Extend More Than One Class?
+Can An Interface Be Final?
+Can A Class Be Defined Inside An Interface?
+Can An Interface Be Defined Inside A Class?
+What Is A Marker Interface?
+Which Oo Concept Is Achieved By Using Overloading And Overriding?
+If I Only Change The Return Type, Does The Method Become Overloaded?
+Why Does Java Not Support Operator Overloading?
+Can We Define Private And Protected Modifiers For Variables In Interfaces?
+What Is Externalizable?
+What Modifiers Are Allowed For Methods In An Interface?
+What Is A Local, Member And A Class Variable?
+What Is An Abstract Method?
+What Value Does Read() Return When It Has Reached The End Of A File?
+Can A Byte Object Be Cast To A Double Value?
+What Is The Difference Between A Static And A Non-static Inner Class?
+A non-static inner class may have object instances that are associated with instances of the class’s outer class. A static inner class does not have any object instances.
+What Is An Object’s Lock And Which Object’s Have Locks?
+What Is The % Operator?
+When Can An Object Reference Be Cast To An Interface Reference?
+Which Class Is Extended By All Other Classes?
+Which Non-unicode Letter Characters May Be Used As The First Character Of An Identifier?
+What Restrictions Are Placed On Method Overloading?
+What Is Transient Variable?
+What Is Collection Api?
+What Is Casting?
+What Is The Return Type Of A Program’s Main() Method?
+If A Variable Is Declared As Private, Where May The Variable Be Accessed?
+What Do You Understand By Private, Protected And Public?
+What Is Downcasting ?
+What Modifiers May Be Used With An Inner Class That Is A Member Of An Outer Class?
+How Many Bits Are Used To Represent Unicode, Ascii, Utf-16, And Utf-8 Characters?
+What Restrictions Are Placed On The Location Of A Package Statement Within A Source Code File?
+What Is A Native Method?
+What Are Order Of Precedence And Associativity, And How Are They Used?
+Can An Anonymous Class Be Declared As Implementing An Interface And Extending A Class?
+What Is The Range Of The Char Type?
+What Is The Range Of The Short Type?
+Why Isn’t There Operator Overloading?
+What Does It Mean That A Method Or Field Is “static”?
+Is Null A Keyword?
+Which Characters May Be Used As The Second Character Of An Identifier,but Not As The First Character Of An Identifier?
+Is The Ternary Operator Written X : Y ? Z Or X ? Y : Z ?
+How Is Rounding Performed Under Integer Division?
+If A Class Is Declared Without Any Access Modifiers, Where May The Class Be Accessed?
+Does A Class Inherit The Constructors Of Its Superclass?
+Name The Eight Primitive Java Types.
+What Restrictions Are Placed On The Values Of Each Case Of A Switch Statement?
+What Is The Difference Between A While Statement And A Do Statement?
+What Modifiers Can Be Used With A Local Inner Class?
+When Does The Compiler Supply A Default Constructor For A Class?
+If A Method Is Declared As Protected, Where May The Method Be Accessed?
+What Are The Legal Operands Of The Instanceof Operator?
+Are True And False Keywords?
+What Happens When You Add A Double Value To A String?
+What Is The Diffrence Between Inner Class And Nested Class?
+Can An Abstract Class Be Final?
+What Is Numeric Promotion?
+What Is The Difference Between A Public And A Non-public Class?
+To What Value Is A Variable Of The Boolean Type Automatically Initialized?
+What Is The Difference Between The Prefix And Postfix Forms Of The ++ Operator?
+What Restrictions Are Placed On Method Overriding?
+What Is A Java Package And How Is It Used?
+What Modifiers May Be Used With A Top-level Class?
+What Is The Difference Between An If Statement And A Switch Statement?
+Can A Method Be Overloaded Based On Different Return Type But Same Argument Type ?
+What Happens To A Static Var That Is Defined Within A Method Of A Class ?
+How Many Static Init Can You Have ?
+What Is The Difference Between Method Overriding And Overloading?
+What Is Constructor Chaining And How Is It Achieved In Java ?
+What Is The Difference Between The Boolean & Operator And The && Operator?
+Which Java Operator Is Right Associative?
+Can A Double Value Be Cast To A Byte?
+----------------------------------------------------------
+Java Interview Questions for 3 Years Experience
+
+What Is The Difference Between A Break Statement And A Continue Statement?
+Can A For Statement Loop Indefinitely?
+To What Value Is A Variable Of The String Type Automatically Initialized?
+What Is The Difference Between A Field Variable And A Local Variable?
+How Are This() And Super() Used With Constructors?
+What Does It Mean That A Class Or Member Is Final?
+What Does It Mean That A Method Or Class Is Abstract?
+Can An Anonymous Class Be Declared As Implementing An Interface And Extending A Class?
+What Is The Catch Or Declare Rule For Method Declarations?
+What Are Some Alternatives To Inheritance?
+What Are The Different Identifier States Of A Thread?
+What Is Garbage Collection? What Is The Process That Is Responsible For Doing That In Java?
+What Kind Of Thread Is The Garbage Collector Thread?
+What Is A Daemon Thread?
+How Will You Invoke Any External Process In Java?
+What Is The Finalize Method Do?
+What Is Mutable Object And Immutable Object?
+What Is The Basic Difference Between String And Stringbuffer Object?
+What Is The Purpose Of Void Class?
+What Is Reflection?
+What Is The Base Class For Error And Exception?
+What Is The Byte Range?
+What Is The Implementation Of Destroy Method In Java.. Is It Native Or Java Code?
+What Are The Approaches That You Will Follow For Making A Program Very Efficient?
+What Is A Databasemetadata?
+What Is Locale?
+How Will You Load A Specific Locale?
+What Is Jit And Its Use?
+Is Jvm A Compiler Or An Interpreter?
+	-> Interpreter
+What Is The Purpose Of Assert Keyword Used In Jdk1.4.x?
+How Will You Get The Platform Dependent Values Like Line Separator, Path Separator, Etc., ?
+Is “abc” A Primitive Value?
+What Is Singleton?
+Can You Instantiate The Math Class?
+What Are The Methods In Object?
+What Is Aggregation?
+What Is Composition?
+
+
+What Is Inner Class?
+What Is Nested Class?
+What Is The Major Difference Between Linkedlist And Arraylist?
+What Is The Significance Of Listiterator?
+What Is The Final Keyword Denotes?
+What Is Skeleton And Stub? What Is The Purpose Of Those?
+Why Does It Take So Much Time To Access An Applet Having Swing Components The First Time?
+What Is The Difference Between Instanceof And Isinstance?
+What Does The “final” Keyword Mean In Front Of A Variable? A Method? A Class?
+Describe What Happens When An Object Is Created In Java?
+What Is The Difference Amongst Jvm Spec, Jvm Implementation, Jvm Runtime ?
+How Does Java Handle Integer Overflows And Underflows?
+Why Are There No Global Variables In Java?
+Whats The Difference Between Notify() And Notifyall()?
+How Can My Application Get To Know When A Httpsession Is Removed?
+What Interface Must An Object Implement Before It Can Be Written To A Stream As An Object?
+What Is Your Platform’s Default Character Encoding?
+What An I/o Filter?
+What Is The Purpose Of Finalization?
+Which Class Should You Use To Obtain Design Information About An Object?
+What Is The Purpose Of The System Class?
+Can We Use The Constructor, Instead Of Init(), To Initialize Servlet?
+How Can A Servlet Refresh Automatically If Some New Data Has Entered The Database?
+----------------------------------------------------------
+Java Interview Questions for 4 Years Experience
+
+The Code In A Finally Clause Will Never Fail To Execute, Right?
+How Many Messaging Models Do Jms Provide For And What Are They?
+What Information Is Needed To Create A Tcp Socket?
+What Class.forname Will Do While Loading Drivers?
+How Many Jsp Scripting Elements Are There And What Are They?
+What Are Stored Procedures? How Is It Useful?
+How Do I Include Static Files Within A Jsp Page?
+Why Does Jcomponent Have Add() And Remove() Methods But Component Does Not?
+How Can I Implement A Thread-safe Jsp Page?
+What Is The Difference Between Procedural And Object-oriented Programs?
+What Are Encapsulation, Inheritance And Polymorphism?
+What Is The Difference Between Assignment And Initialization?
+What Is Oops?
+What Are Class, Constructor And Primitive Data Types?
+What Is An Object And How Do You Allocate Memory To It?
+What Is The Difference Between Constructor And Method?
+What Are Methods And How Are They Defined?
+What Is The Use Of Bin And Lib In Jdk?
+How Many Ways Can An Argument Be Passed To A Subroutine And Explain Them?
+What Is The Difference Between An Argument And A Parameter?
+How Would You Implement A Thread Pool?
+What Are The Advantages And Disadvantages Of Reference Counting In Garbage Collection?
+Why Java Is Said To Be Pass-by-value ?
+What Are The Access Modifiers Available In Java?
+	-> public , default , protected and private
+	
+What Are Synchronized Methods And Synchronized Statements?
+	-> synchronized method acquires a method on the whole object. This means no other thread can use any synchronized method in the whole object while the method is being run by one thread. synchronized blocks acquires a lock in the object between parentheses after the synchronized keyword.
+	
+What Are The Different Ways In Which A Thread Can Enter Into Waiting State?
+What Is The Difference Between Static And Non Static Variables ?
+What Is The Difference Between Notify And Notifyall Method?
+What Are Different Type Of Exceptions In Java?
+Explain About The Select Method With An Example?
+Can There Be An Abstract Class With No Abstract Methods In It?
+Can We Define Private And Protected Modifiers For Variables In Interfaces?
+What Is Garbage Collection? What Is The Process That Is Responsible For Doing That In Java?
+Can There Be An Abstract Class With No Abstract Methods In It?
+Can An Interface Have An Inner Class?
+What Is User Defined Exception?
+What Is The Difference Between Logical Data Independence And Physical Data Independence?
+What Are The Practical Benefits, If Any, Of Importing A Specific Class Rather Than An Entire Package (e.g. Import Java.net.* Versus Import Java.net.socket)?
+How Many Methods Do U Implement If Implement The Serializable Interface?
+What Does The “abstract” Keyword Mean In Front Of A Method? A Class?
+You Can Create A String Object As String Str = “abc”; Why Cant A Button Object Be Created As Button Bt = “abc”;? Explain
+Can Rmi And Corba Based Applications Interact ?
+What Is Passed By Reference And Pass By Value ?
+What Is A “stateless” Protocol ?
+Difference Between A Class And An Object ?
+What Are The Four Corner Stones Of Oop?
+What Gives Java It’s “write Once And Run Anywhere” Nature?
+How Can A Dead Thread Be Restarted?
+What Happens If An Exception Is Not Caught?
+What Is A Compilation Unit?
+What Is A Task’s Priority And How Is It Used In Scheduling?
+What Value Does Readline() Return When It Has Reached The End Of A File?
+Can An Object’s Finalize() Method Be Invoked While It Is Reachable?
+Does Garbage Collection Guarantee That A Program Will Not Run Out Of Memory?
+Is Sizeof A Keyword?
+What State Does A Thread Enter When It Terminates Its Processing?
+Can A Lock Be Acquired On A Class?
+How Are Observer And Observable Used?
+What Is A Transient Variable?
+Wha Is The Output From System.out.println(“hello”+null); ?
+What Are E And Pi?
+If An Object Is Garbage Collected, Can It Become Reachable Again?
+Can An Exception Be Rethrown?
+What Is The Purpose Of The File Class?
+Is A Class Subclass Of Itself?
+What Modifiers May Be Used With An Interface Declaration?
+What Classes Of Exceptions May Be Caught By A Catch Clause?
+What Is The Difference Between The Reader/writer Class Hierarchy And The Inputstream/outputstream Class Hierarchy?
+Can An Object Be Garbage Collected While It Is Still Reachable?
+What Is An Object’s Lock And Which Object’s Have Locks?
+How Are Commas Used In The Intialization And Iteration Parts Of A For Statement?
+What Must A Class Do To Implement An Interface?
+What Is The Difference Between Preemptive Scheduling And Time Slicing?
+What Restrictions Are Placed On The Location Of A Package Statement Within A Source Code File?
+What Are Wrapped Classes?
+Is It Possible To Specify Multiple Jndi Names When Deploying An Ejb?
+What Is Java And Their Uses?
+What Is Hotjava?
+How Can You Say Java Is Object Oriented?
+Why Java Is Platform Independent? Explain.
+Why Java Is Secure? Explain.
+Why Do People Says “java Is Robust”?
+How Java Is Similar To C?
+What’s The Difference Between Applets And Standalone Program?
+Why Java Applets Are More Useful For Intranets As Compared To Internet?
+How Can You Set The Applet Size?
+How Can You Set An Applet’s Height And Width As A Percentage?
+What Is Codebase?
+What Is Appletviewer?
+Explain, Java Is Compatible With All Servers But Not All Browsers?
+What Is The Program Development Process?
+What Is The File Type?
+What Is Javac_g?
+How To Optimize The Javac Output?
+What Is The Difference Between Java Applets And Applications?
+Can You Explain The Cs Option Of Java Interpreter?
+What Is The Statements?
+What Is Style And Indentation?
+What Is The Program Compilation Process?
+What Is Java Literals?
+What Is The Primitive Type Byte?
+What Is The Primitive Type Short?
+Why Call By Value Prevents Parameter Value Change?
+What Is Remote Method Invocation (rmi)?
+What Is Java Jit Compilers?
+What Is The Java Idl System?
+What Is Java Beans?
+What Is Object-oriented Programming?
+What Is Abstraction?
+What Is Encapsulation?
+How Does The Application Server Handle The Jms Connection?
+What Is A Superclass?
+Explain The Abstract Class Modifier?
+What Is The Final Class Modifier?
+Explain The Public Class Modifier.
+What Is The Public Field Modifier?
+Explain The Private Field Modifier?
+Explain The Protected Field Modifier?
+Can You Explain The Private Protected Field Modifier?
+What Is The Static Field Modifier?
+What Is The Final Field Modifier?
+Explain The Transient Field Modifier?
+Explain The Use Of Volatile Field Modifier?
+What Is Default Constructors?
+What Is The Public Method Modifier?
+What Is The Private Method Modifier?
+What Is The Protected Method Modifier?
+Explain The Private Protected Method Modifier?
+Can You Explain The Final Method Modifier?
+What Is The Abstract Method Modifier?
+What Is The Synchronized Method Modifier?
+Explain The Init Method?
+What Is The Destroy Method?
+What Is Multithreading?
+----------------------------------------------------------
+Java Interview Questions for 5 Years Experience
+How Java Uses The String And Stringbuffer Classes?
+What Is The Epoch Date?
+What Is An Arrays?
+What Is Binary Search?
+Can A Private Method Of A Superclass Be Declared Within A Subclass?
+What Is Quick Sort?
+What Is The Difference Between Final, Finally And Finalize?
+In System.out.println( ), What Is System, Out And Println?
+What Is Meant By “abstract Interface”?
+What Is The Difference Between Swing And Awt Components?
+Why Java Does Not Support Pointers?
+What Are Parsers? Dom Vs Sax Parser.
+What Is A Platform?
+What Is The Main Difference Between Java Platform And Other Platforms?
+What Is The Java Virtual Machine?
+What Is The Java Api?
+What Is The Package?
+What Is Native Code?
+Is Java Code Slower Than Native Code?
+What Is The Serialization?
+How To Make A Class Or A Bean Serializable?
+How Many Methods Are There In The Serializable Interface?
+How Many Methods Are There In The Externalizable Interface?
+Which Containers Use A Border Layout As Their Default Layout?
+What Is Synchronization And Why Is It Important?
+What Are Three Ways In Which A Thread Can Enter The Waiting State?
+What Is The Preferred Size Of A Component?
+Can Java Object Be Locked Down For Exclusive Use By A Given Thread?
+Can Each Java Object Keep Track Of All The Threads That Want To Exclusively Access It?
+What Is The Purpose Of The Wait(), Notify() And Notifyall() Methods?
+What Are The High-level Thread States?
+What Is The Collections Api?
+What Is The List Interface?
+How Many Bits Are Used To Represent Unicode, Ascii, Utf-16 And Utf-8 Characters?
+What Is The Properties Class?
+What Is The Purpose Of The Runtime Class?
+What Is The Purpose Of The Finally Clause Of A Try-catch-finally Statement?
+What Is The Locale Class?
+What Is A Protected Method?
+What Is A Static Method?
+What Is The Difference Between A Window And A Frame?
+What Are Peerless Components?
+What Is The Difference Between The Reader/writer Class Hierarchy And The Inputstream/outputstream Class Hierarchy?
+What Is The Difference Between Throw And Throws Keywords?
+Name Primitive Java Types?
+How Can A Gui Component Handle Its Own Events?
+What Advantage Do Java’s Layout Managers Provide Over Traditional Windowing Systems?
+What Are The Problems Faced By Java Programmers Who Don’t Use Layout Managers?
+What Is The Difference Between Static And Non-static Variables?
+What Is The Difference Between The Paint() And Repaint() Methods?
+What Is A Container In A Gui?
+Is Iterator A Class Or Interface? What Is Its Use?
+How You Can Force The Garbage Collection?
+Describe The Principles Of Oops?
+Explain The Encapsulation Principle?
+Explain The Inheritance Principle?
+How To Define An Abstract Class?
+How To Define An Interface?
+Explain The Polymorphism Principle?
+Explain The Different Forms Of Polymorphism?
+What Are Access Specifiers Available In Java?
+What Do You Understand By A Variable?
+What Do You Understand By Numeric Promotion?
+Differentiate Between A Class And An Object.
+What Is The Use Of Object And Class Classes?
+What Do You Understand By Casting In Java Language?
+What Are The Types Of Casting?
+What Do You Understand By Downcasting?
+What Do You Understand By Final Value?
+What Are Keyboard Events?
+What Is The Intersection And Union Methods?
+What Are Controls And Their Different Types In Awt?
+What Is The Difference Between Choice And List?
+What Is The Difference Between Scrollbar And Scrollpane?
+Which Containers Use A Flow Layout As Their Default Layout?
+What Are Wrapper Classes?
+What Is The Difference Between Set And List?
+How Can The Checkbox Class Be Used To Create A Radio Button?
+Which Textcomponent Method Is Used To Set A Textcomponent To The Read-only State?
+What Methods Are Used To Get And Set The Text Label Displayed By A Button Object?
+What Is The Difference Between Yield() And Sleep()?
+How To Handle A Web Browser Resize Operation?
+Explain The Concept Of Hashtables?
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Describe A Problem You Faced And How You Deal With It ?
+
+How To Read And Write Image From A File ?
+
+How Concurrenthashmap Works?
+
+Can A Static Block Throw Exception?
+	---> Yes, static block can throw only Runtime exception or can use a try-catch block to catch checked exception.
+
+What Is Difference Between Iterator Access And Index Access?
+	-> Index based access allow access of the element directly on the basis of index. The cursor of the datastructure can directly goto the ‘n’ location and get the element. It doesnot traverse through n-1 elements.
+	-> In Iterator based access, the cursor has to traverse through each element to get the desired element.So to reach the ‘n’th element it need to traverse through n-1 elements.
+	-> Insertion,updation or deletion will be faster for iterator based access if the operations are performed on elements present in between the datastructure.
+
+What Is Java Reflection Api?
+
+What Is The Difference Between Serializable And Externalizable Interfaces?
+
+
+
+=======================================================================================
+https://www.indiabix.com/technical/core-java/9
+-----------------------------------------------------------------------------------------
+What is the most important feature of Java?
+	--> Java is a platform independent language.
+What do you mean by platform independence?
+	--> Platform independence means that we can write and compile the java code in one platform (eg Windows) and can execute the class in any other supported platform eg (Linux,Solaris,etc).
+What is a JVM?
+	--> JVM is Java Virtual Machine which is a run time environment for the compiled java class files.
+Are JVM's platform independent?
+	--> JVM's are not platform independent. JVM's are platform specific run time implementation provided by the vendor.
+What is the difference between a JDK and a JVM?
+	--> JDK is Java Development Kit which is for development purpose and it includes execution environment also. But JVM is purely a run time environment and hence you will not be able to compile your source files using a JVM.
+What is a pointer and does Java support pointers?
+	--> Pointer is a reference handle to a memory location. Improper handling of pointers leads to memory leaks and reliability issues hence Java doesn't support the usage of pointers.
+
+
+What is the base class of all classes?
+	--> java.lang.Object
+Does Java support multiple inheritance?
+	--> Java doesn't support multiple inheritance.
+Is Java a pure object oriented language?
+	--> Java uses primitive data types and hence is not a pure object oriented language.
+Are arrays primitive data types?
+	--> In Java, Arrays are objects.
+What is difference between Path and Classpath?
+	--> Path and Classpath are operating system level environment variales. Path is used define where the system can find the executables(.exe) files and classpath is used to specify the location .class files.
+What are local variables?
+	--> Local varaiables are those which are declared within a block of code like methods. Local variables should be initialised before accessing them.
+
+
+What are instance variables?
+	-> Instance variables are those which are defined at the class level. Instance variables need not be initialized before using them as they are automatically initialized to their default values.
+
+How to define a constant variable in Java?
+	-> The variable should be declared as static and final. So only one copy of the variable exists for all instances of the class and the value can't be changed also.
+	-> static final int MAX_LENGTH = 50; is an example for constant.
+
+Should a main() method be compulsorily declared in all java classes?
+	-> No not required. main() method should be defined only if the source class is a java application.
+
+What is the return type of the main() method?
+	-> Main() method doesn't return anything hence declared void.
+
+Why is the main() method declared static?
+	-> main() method is called by the JVM even before the instantiation of the class hence it is declared as static.
+
+What is the arguement of main() method?
+	-> main() method accepts an array of String object as arguement.
+
+Can a main() method be overloaded?
+	-> Yes. You can have any number of main() methods with different method signature and implementation in the class.
+
+Can a main() method be declared final?
+	-> Yes. Any inheriting class will not be able to have it's own default main() method.
+
+Does the order of public and static declaration matter in main() method?
+	-> No. It doesn't matter but void should always come before main().
+
+Can a source file contain more than one class declaration?
+	-> Yes a single source file can contain any number of Class declarations but only one of the class can be declared as public.
+
+What is a package?
+	-> Package is a collection of related classes and interfaces. package declaration should be first statement in a java class.
+	
+Which package is imported by default?
+	-> java.lang package is imported by default even without a package declaration.
+
+Can a class declared as private be accessed outside it's package?
+	-> Not possible.
+
+Can a class be declared as protected?
+	-> The protected access modifier cannot be applied to class and interfaces. Methods, fields can be declared protected, however methods and fields in a interface cannot be declared protected.
+
+What is the access scope of a protected method?
+	-> A protected method can be accessed by the classes within the same package or by the subclasses of the class in any package.
+
+What is the purpose of declaring a variable as final?
+	-> A final variable's value can't be changed. final variables should be initialized before using them.
+
+What is the impact of declaring a method as final?
+	-> A method declared as final can't be overridden. A sub-class can't have the same method signature with a different implementation.
+
+I don't want my class to be inherited by any other class. What should i do?
+	-> You should declared your class as final. But you can't define your class as final, if it is an abstract class. A class declared as final can't be extended by any other class.
+
+32.Can you give few examples of final classes defined in Java API?
+	-> java.lang.String, java.lang.Math are final classes.
+
+33.How is final different from finally and finalize()?
+	-> final is a modifier which can be applied to a class or a method or a variable. final class can't be inherited, final method can't be overridden and final variable can't be changed. 
+
+	finally is an exception handling code section which gets executed whether an exception is raised or not by the try block code segment. 
+
+	finalize() is a method of Object class which will be executed by the JVM just before garbage collecting object to give a final chance for resource releasing activity.
+
+34.Can a class be declared as static?
+	-> We can not declare top level class as static, but only inner class can be declared static.
+	public class Test
+	{ 
+		static class InnerClass
+		{
+			public static void InnerMethod()
+			{ System.out.println("Static Inner Class!"); }
+		} 
+		public static void main(String args[])
+		{
+		   Test.InnerClass.InnerMethod();
+		}
+	}
+	//output: Static Inner Class!
+
+35.When will you define a method as static?
+	-> When a method needs to be accessed even before the creation of the object of the class then we should declare the method as static.
+
+36.What are the restriction imposed on a static method or a static block of code?
+	-> A static method should not refer to instance variables without creating an instance and cannot use "this" operator to refer the instance.
+
+37.I want to print "Hello" even before main() is executed. How will you acheive that?
+	-> Print the statement inside a static block of code. Static blocks get executed when the class gets loaded into the memory and even before the creation of an object. Hence it will be executed before the main() method. And it will be executed only once.
+
+38.What is the importance of static variable?
+	-> static variables are class level variables where all objects of the class refer to the same variable. If one object changes the value then the change gets reflected in all the objects.
+
+39.Can we declare a static variable inside a method?
+	-> Static varaibles are class level variables and they can't be declared inside a method. If declared, the class will not compile.
+
+40.What is an Abstract Class and what is it's purpose?
+	-> A Class which doesn't provide complete implementation is defined as an abstract class. Abstract classes enforce abstraction.
+
+41.Can a abstract class be declared final?
+	-> Not possible. An abstract class without being inherited is of no use and hence will result in compile time error.
+
+42.What is use of a abstract variable?
+	-> Variables can't be declared as abstract. only classes and methods can be declared as abstract.
+
+43.Can you create an object of an abstract class?
+	-> Not possible. Abstract classes can't be instantiated.
+
+44.Can a abstract class be defined without any abstract methods?
+	-> Yes it's possible. This is basically to avoid instance creation of the class.
+
+45.Class C implements Interface I containing method m1 and m2 declarations. Class C has provided implementation for method m2. Can i create an object of Class C?
+	-> No not possible. Class C should provide implementation for all the methods in the Interface I. Since Class C didn't provide implementation for m1 method, it has to be declared as abstract. Abstract classes can't be instantiated.
+
+-------------------------------------------------------
+46.Can a method inside a Interface be declared as final?
+	--> No not possible. Doing so will result in compilation error. public and abstract are the only applicable modifiers for method declaration in an interface.
+
+47.Can an Interface implement another Interface?
+	--> Intefaces doesn't provide implementation hence a interface cannot implement another interface.
+
+48.Can an Interface extend another Interface?
+	--> Yes an Interface can inherit another Interface, for that matter an Interface can extend more than one Interface.
+
+49.Can a Class extend more than one Class?
+	--> Not possible. A Class can extend only one class but can implement any number of Interfaces.
+
+50.Why is an Interface be able to extend more than one Interface but a Class can't extend more than one Class?
+	--> Basically Java doesn't allow multiple inheritance, so a Class is restricted to extend only one Class. But an Interface is a pure abstraction model and doesn't have inheritance hierarchy like classes(do remember that the base class of all classes is Object). So an Interface is allowed to extend more than one Interface.
+
+51.Can an Interface be final?
+	--> Not possible. Doing so so will result in compilation error.
+
+52.Can a class be defined inside an Interface?
+	--> Yes it's possible.
+
+53.Can an Interface be defined inside a class?
+	--> Yes it's possible.
+
+54.What is a Marker Interface?
+	--> An Interface which doesn't have any declaration inside but still enforces a mechanism.
+
+55.Which object oriented Concept is achieved by using overloading and overriding?
+	--> Polymorphism.
+	
+56.Why does Java not support operator overloading?
+	--> Operator overloading makes the code very difficult to read and maintain. To maintain code simplicity, Java doesn't support operator overloading.
+
+57.Can we define private and protected modifiers for variables in interfaces?
+	--> No.
+
+58.What is Externalizable?
+	--> Externalizable is an Interface that extends Serializable Interface. And sends data into Streams in Compressed Format. It has two methods, writeExternal(ObjectOuput out) and readExternal(ObjectInput in)
+
+59.What modifiers are allowed for methods in an Interface?
+		--> Only public and abstract modifiers are allowed for methods in interfaces.
+
+60.What is a local, member and a class variable?
+	--> Variables declared within a method are "local" variables.
+	--> Variables declared within the class i.e not within any methods are "member" variables (global variables).
+	--> Variables declared within the class i.e not within any methods and are defined as "static" are class variables.
+
+61.What is an abstract method?
+	--> An abstract method is a method whose implementation is deferred to a subclass.
+
+62.What value does read() return when it has reached the end of a file?
+	--> The read() method returns -1 when it has reached the end of a file.
+
+63.Can a Byte object be cast to a double value?
+	-->	No, an object cannot be cast to a primitive value.
+	
+64.What is the difference between a static and a non-static inner class?
+	--> A non-static inner class may have object instances that are associated with instances of the class's outer class. A static inner class does not have any object instances.
+	
+65.What is an object's lock and which object's have locks?
+	--> An object's lock is a mechanism that is used by multiple threads to obtain synchronized access to the object. A thread may execute a synchronized method of an object only after it has acquired the object's lock. All objects and classes have locks. A class's lock is acquired on the class's Class object.
+
+66.What is the % operator?
+	--> It is referred to as the modulo or remainder operator. It returns the remainder of dividing the first operand by the second operand.
+
+67.When can an object reference be cast to an interface reference?
+	--> An object reference be cast to an interface reference when the object implements the referenced interface.
+
+68.Which class is extended by all other classes?
+	--> The Object class is extended by all other classes.
+	
+69.Which non-Unicode letter characters may be used as the first character of an identifier?
+	--> The non-Unicode letter characters $ and _ may appear as the first character of an identifier
+	
+70.What restrictions are placed on method overloading?
+	--> Two methods should have same name but different arguments or at least different possition of arguments.
+
+71.What is casting?
+	--> There are two types of casting, casting between primitive numeric types and casting between object references. Casting between numeric types is used to convert larger values, such as double values, to smaller values, such as byte values. Casting between object references is used to refer to an object by a compatible class, interface, or array type reference.
+
+72.What is the return type of a program's main() method?
+	--> void.
+
+73.If a variable is declared as private, where may the variable be accessed?
+	--> A private variable may only be accessed within the class in which it is declared.
+
+74.What do you understand by private, protected and public?
+	--> These are accessibility modifiers. Private is the most restrictive, while public is the least restrictive. There is no real difference between protected and the default type (also known as package protected) within the context of the same package, however the protected keyword allows visibility to a derived class in a different package.
+
+75.What is Downcasting ?
+	--> Upcasting is casting to a supertype, while downcasting is casting to a subtype. Upcasting is always allowed, but downcasting involves a type check and can throw a ClassCastException.
+
+	--> In your case, a cast from from Dog to an Animal is an upcast, because a Dog is-a Animal. In general, you can upcast whenever there is an is-a relationship between two classes.
+
+		Downcasting would be something like this:
+		Animal animal = new Dog();
+		Dog castedDog = (Dog) animal;
+
+76.What modifiers may be used with an inner class that is a member of an outer class?
+	--> A (non-local) inner class may be declared as public, protected, private, static, final, or abstract.
+
+77.How many bits are used to represent Unicode, ASCII, UTF-16, and UTF-8 characters?
+	--> Unicode requires 16 bits and 
+	--> ASCII require 7 bits Although the ASCII character set uses only 7 bits, it is usually represented as 8 bits.
+	--> UTF-8 represents characters using 8, 16, and 18 bit patterns.
+	--> UTF-16 uses 16-bit and larger bit patterns.
+
+78.What restrictions are placed on the location of a package statement within a source code file?
+	--> A package statement must appear as the first line in a source code file (excluding blank lines and comments).
+	
+79.What is a native method?
+	--> A native method is a method that is implemented in a language other than Java.
+
+80.What are order of precedence and associativity, and how are they used?
+	--> Order of precedence determines the order in which operators are evaluated in expressions. Associatity determines whether an expression is evaluated left-to-right or right-to-left.
+
+81.Can an anonymous class be declared as implementing an interface and extending a class?
+	--> An anonymous class may implement an interface or extend a superclass, but may not be declared to do both.
+
+82.What is the range of the char type?
+	--> The range of the char type is 0 to 216 - 1 (i.e. 0 to 65535.)
+
+83.What is the range of the short type?
+	--> The range of the short type is -(215) to 215 - 1. (i.e. -32,768 to 32,767)
+
+84.Why isn't there operator overloading?
+	--> Because C++ has proven by example that operator overloading makes code almost impossible to maintain.
+
+85.What does it mean that a method or field is "static"?
+	--> Static variables and methods are instantiated only once per class. In other words they are class variables, not instance variables. If you change the value of a static variable in a particular object, the value of that variable changes for all instances of that class. Static methods can be referenced with the name of the class rather than the name of a particular object of the class (though that works too). That's how library methods like System.out.println() work. out is a static field in the java.lang.System class.
+
+86.Is null a keyword?
+	--> The null value is not a keyword.
+
+87.Which characters may be used as the second character of an identifier, but not as the first character of an identifier?
+	--> The digits 0 through 9 may not be used as the first character of an identifier but they may be used after the first character of an identifier.
+88.Is the ternary operator written x : y ? z or x ? y : z ?
+	--> It is written x ? y : z.
+
+89.How is rounding performed under integer division?
+	--> The fractional part of the result is truncated. This is known as rounding toward zero.
+
+90.If a class is declared without any access modifiers, where may the class be accessed?
+	--> A class that is declared without any access modifiers is said to have package access. This means that the class can only be accessed by other classes and interfaces that are defined within the same package.
+
+91.Does a class inherit the constructors of its superclass?
+	--> A class does not inherit constructors from any of its superclasses.
+
+92.Name the eight primitive Java types.
+	--> The eight primitive types are byte, char, short, int, long, float, double, and boolean.
+
+93.What restrictions are placed on the values of each case of a switch statement?
+	--> During compilation, the values of each case of a switch statement must evaluate to a value that can be promoted to an int value.
+
+94.What is the difference between a while statement and a do while statement?
+
+	--> A while statement checks at the beginning of a loop to see whether the next loop iteration should occur. A do while statement checks at the end of a loop to see whether the next iteration of a loop should occur. The do while statement will always execute the body of a loop at least once.
+
+95..What modifiers can be used with a local inner class?
+	--> A local inner class may be final or abstract.
+
+96.When does the compiler supply a default constructor for a class?
+	--> The compiler supplies a default constructor for a class if no other constructors are provided.
+
+97.If a method is declared as protected, where may the method be accessed?
+A protected method may only be accessed by classes or interfaces of the same package or by subclasses of the class in which it is declared.
+
+98.What are the legal operands of the instanceof operator?
+	--> The left operand is an object reference or null value and the right operand is a class, interface, or array type.
+
+99.Are true and false keywords?
+	--> The values true and false are not keywords.
+
+100.What happens when you add a double value to a String?
+	--> The result is a String object.
+
+101.What is the diffrence between inner class and nested class?
+	--> When a class is defined within a scope of another class, then it becomes inner class. If the access modifier of the inner class is static, then it becomes nested class.
+
+102.Can an abstract class be final?
+	--> An abstract class may not be declared as final.
+
+103.What is numeric promotion?
+	--> Numeric promotion is the conversion of a smaller numeric type to a larger numeric type, so that integer and floating-point operations may take place. In numerical promotion, byte, char, and short values are converted to int values. The int values are also converted to long values, if necessary. The long and float values are converted to double values, as required.
+
+104.What is the difference between a public and a non-public class?
+	--> A public class may be accessed outside of its package. A non-public class may not be accessed outside of its package.
+
+105.To what value is a variable of the boolean type automatically initialized?
+	--> The default value of the boolean type is false.
+
+106.What is the difference between the prefix and postfix forms of the ++ operator?
+	--> The prefix form performs the increment operation and returns the value of the increment operation. The postfix form returns the current value all of the expression and then performs the increment operation on that value.
+
+107.What restrictions are placed on method overriding?
+	--> Overridden methods must have the same name, argument list, and return type. The overriding method may not limit the access of the method it overrides. The overriding method may not throw any exceptions that may not be thrown by the overridden method.
+
+108.What is a Java package and how is it used?
+	--> A Java package is a naming context for classes and interfaces. A package is used to create a separate name space for groups of classes and interfaces. Packages are also used to organize related classes and interfaces into a single API unit and to control accessibility to these classes and interfaces.
+
+109.What modifiers may be used with a top-level class?
+	--> A top-level class may be public, abstract, or final.
+
+110.What is the difference between an if statement and a switch statement?
+	--> The if statement is used to select among two alternatives. It uses a boolean expression to decide which alternative should be executed. The switch statement is used to select among multiple alternatives. It uses an int expression to determine which alternative should be executed.
+
+111.What are the practical benefits, if any, of importing a specific class rather than an entire package (e.g. import java.net.* versus import java.net.Socket)?
+
+	--> It makes no difference in the generated class files since only the classes that are actually used are referenced by the generated class file. There is another practical benefit to importing single classes, and this arises when two (or more) packages have classes with the same name. Take java.util.Timer and javax.swing.Timer, for example. If I import java.util.* and javax.swing.* and then try to use "Timer", I get an error while compiling (the class name is ambiguous between both packages). Let's say what you really wanted was the javax.swing.Timer class, and the only classes you plan on using in java.util are Collection and HashMap. In this case, some people will prefer to import java.util.Collection and import java.util.HashMap instead of importing java.util.*. This will now allow them to use Timer, Collection, HashMap, and other javax.swing classes without using fully qualified class names in.
+
+112.Can a method be overloaded based on different return type but same argument type ?
+	--> No, because the methods can be called without using their return type in which case there is ambiquity for the compiler.
+
+113.What happens to a static variable that is defined within a method of a class ?
+	--> Can't do it. You'll get a compilation error.
+
+114.How many static initializers can you have ?
+	--> As many as you want, but the static initializers and class variable initializers are executed in textual order and may not refer to class variables declared in the class whose declarations appear textually after the use, even though these class variables are in scope.
+
+115.What is the difference between method overriding and overloading?
+	--> Overriding is a method with the same name and arguments as in a parent, whereas overloading is the same method name but different arguments
+
+116.What is constructor chaining and how is it achieved in Java ?
+	--> Constructor chaining is the process of calling one constructor from another constructor with respect to current object.
+	-->Constructor chaining can be done in two ways:
+		-->Within same class: It can be done using this() keyword for constructors in same class
+		-->From base class: by using super() keyword to call constructor from the base class.
+
+117.What is the difference between the Boolean & operator and the && operator?
+
+	-->If an expression involving the Boolean & operator is evaluated, both operands are evaluated. Then the & operator is applied to the operand. When an expression involving the && operator is evaluated, the first operand is evaluated. If the first operand returns a value of true then the second operand is evaluated. The && operator is then applied to the first and second operands. If the first operand evaluates to false, the evaluation of the second operand is skipped.
+
+118.Which Java operator is right associative?
+	--> The = operator is right associative.
+
+119.Can a double value be cast to a byte?
+	--> Yes, a double value can be cast to a byte.
+
+120.What is the difference between a break statement and a continue statement?
+	--> break completely exits the loop. continue skips the statements after the continue statement and keeps looping.
+
+121.Can a for statement loop indefinitely?
+	--> Yes, a for statement can loop indefinitely. For example, consider the following: for(;;);
+
+122.To what value is a variable of the String type automatically initialized?
+	--> The default value of an String type is null.
+
+123.What is the difference between a field variable and a local variable?
+	--> A field variable is a variable that is declared as a member of a class. A local variable is a variable that is declared local to a method.
+
+124.How are this() and super() used with constructors?
+	--> this() is used to invoke a constructor of the same class. super() is used to invoke a superclass constructor.
+
+125.What does it mean that a class or member is final?
+	--> A final class cannot be inherited. A final method cannot be overridden in a subclass. A final field cannot be changed after it's initialized, and it must include an initializer statement where it's declared.
+
+126.What does it mean that a method or class is abstract?
+	--> An abstract class cannot be instantiated. Abstract methods may only be included in abstract classes. However, an abstract class is not required to have any abstract methods, though most of them do. Each subclass of an abstract class must override the abstract methods of its superclasses or it also should be declared abstract.
+
+127.What is a transient variable?
+	--> Transient variable is a variable that may not be serialized.
+
+128.How does Java handle integer overflows and underflows?
+	--> It uses those low order bytes of the result that can fit into the size of the type allowed by the operation.
+
+129.What is the difference between the >> and >>> operators?
+	--> The >> operator carries the sign bit when shifting right. The >>> zero-fills bits that have been shifted out.
+
+130.Is sizeof a keyword?
+	--> The sizeof operator is not a keyword.
+	
+131.What Is The Catch Or Declare Rule For Method Declarations?
+	--> If a checked exception may be thrown within the body of a method, the method musteither catch the exception or declare it in its throws clause.
+
+132.What Are Some Alternatives To Inheritance?
+	--> Delegation is an alternative to inheritance. Delegation means that you include an instance of another class as an instance variable, and forward messages to the instance. It is often safer than inheritance because it forces you to think about each message you forward, because the instance is of a known class, rather than a new class, and because it doesn't force you to accept all the methods of the super class: you can provide only the methods that really make sense. On the other hand, it makes you write more code, and it is harder to re-use (because it is not a subclass).
+
+133.What Are The Different Identifier States Of A Thread?
+	--> A thread in Java at any point of time exists in any one of the following states. A thread lies only in one of the shown states at any instant:
+		1.New
+		2.Runnable
+		3.Blocked
+		4.Waiting
+		5.Timed Waiting
+		6.Terminated
+
+134.What Is Garbage Collection? What Is The Process That Is Responsible For Doing That In Java?
+	--> Java garbage collection is an automatic process. The programmer does not need to explicitly mark objects to be deleted. The garbage collection implementation lives in the JVM. Each JVM can implement garbage collection however it pleases; the only requirement is that it meets the JVM specification. Although there are many JVMs, Oracle’s HotSpot is by far the most common. It offers a robust and mature set of garbage collection options.
+
+135.What Kind Of Thread Is The Garbage Collector Thread?
+	--> Daemon thread
+
+136.What Is A Daemon Thread?
+	--> It provides services to user threads for background supporting tasks. It has no role in life than to serve user threads.
+	--> Its life depends on user threads.
+	--> It is a low priority thread.
+	--> i.e. when all the user threads dies, JVM terminates this thread automatically.
+
+137.How Will You Invoke Any External Process In Java?
+	--> We can invoke the external process in Java using exec() method of Runtime Class.
+
+138.What Is The Finalize Method Do?
+	--> The java.lang.Object.finalize() is called by the garbage collector on an object when garbage collection determines that there are no more references to the object. A subclass overrides the finalize method to dispose of system resources or to perform other cleanup.
+
+139.What Is Mutable Object And Immutable Object?
+	--> 1. Mutable object – You can change the states and fields after the object is created. For examples: StringBuilder, java.util.Date and etc.
+	--> 2. Immutable object – You cannot change anything after the object is created. For examples: String, boxed primitive objects like Integer, Long and etc.
+
+140.What Is The Basic Difference Between String And Stringbuffer Object?
+	--> 1)	String class is immutable.	
+		-->	StringBuffer class is mutable.
+		2)	String is slow and consumes more memory when you concat too many strings because every time it creates new instance.	
+		-->	StringBuffer is fast and consumes less memory when you cancat strings.
+		3)	String class overrides the equals() method of Object class. So you can compare the contents of two strings by equals() method.	
+		-->	StringBuffer class doesn't override the equals() method of Object class.
+
+141.What Is The Purpose Of Void Class?
+	--> The Void class according to javadoc exists because of the fact that some time we may need to represent the void keyword as an object. But at the same point we cannot create an instance of the Void class using the new operator.
+	--> This is because the constructor in Void has been declared as private. 
+	--> Moreover the Void class is a final class which means that there is no way we can inherit this class.
+	--> So the only purpose that remains for the existence of the Void class is reflection, where we can get the return type of a method as void
+	
+142.What Is Reflection?
+	--> The name reflection is used to describe code which is able to inspect other code in the same system (or itself).
+
+	--> For example, say you have an object of an unknown type in Java, and you would like to call a 'doSomething' method on it if one exists. Java's static typing system isn't really designed to support this unless the object conforms to a known interface, but using reflection, your code can look at the object and find out if it has a method called 'doSomething' and then call it if you want to.
+
+	--> So, to give you a code example of this in Java (imagine the object in question is foo) :
+
+			Method method = foo.getClass().getMethod("doSomething", null);
+			method.invoke(foo, null);
+
+143.What Is The Base Class For Error And Exception?
+	--> Throwable 
+	
+144.What Is A Databasemetadata?
+	--> DatabaseMetaData provides comprehensive information about the database. This interface is implemented by the driver vendors to allow the user to obtain information about the tables of a relational database as a part of JDBC application. User can use this interface to deal with various underlying DBMSs. Some of the methods are:
+	--> getDatabaseMajorVersion(), getDatabaseMinorVersion(), getDatabaseProductName(), getDatabaseProductVersion(), getMaxRowSize(), getPrimaryKeys(), getURL(), getUserName() etc.
+
+145.What Is Locale?
+	--> The java.util.Locale class object represents a specific geographical, political, or cultural region. .Following are the important points about Locale −
+	
+	--> An operation that requires a Locale to perform its task is called locale-sensitive and uses the Locale to form information for the user.
+	--> Locale is a mechanism for identifying objects, not a container for the objects themselves.
+
+146.Is “abc” A Primitive Value?
+	--> The String literal "abc" is not a primitive value. It is a String object.
+	
+147.What Is Singleton?
+	--> Singleton Class in Java. In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time. ... To design a singleton class: Make constructor as private. Write a static method that has return type object of this singleton class.
+	
+148.Can You Instantiate The Math Class?
+	-->You can't instantiate a Math instance.
+	-->All the methods in Math class is static. The constructor is not public in the Math class. So, we can't create the object of Math class.
+	
+149.What Is Aggregation?
+	--> Aggregation in Java is a relationship between two classes that is best described as a "has-a" and "whole/part" relationship. It is a more specialized version of the association relationship. The aggregate class contains a reference to another class and is said to have ownership of that class.
+	
+150.What Is Composition?
+	--> Composition in java is the design technique to implement has-a relationship in classes. We can use java inheritance or Object composition in java for code reuse.

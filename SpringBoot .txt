@@ -1,0 +1,107 @@
+What is Spring Boot?
+What are the advantages of using Spring Boot?
+Explain the concept of auto-configuration in Spring Boot.
+How do you create a Spring Boot project?
+What is the purpose of the @SpringBootApplication annotation?
+Explain the difference between @Component, @Service, and @Repository annotations in Spring Boot.
+What is the role of the SpringApplication class in Spring Boot?
+How does Spring Boot handle configuration?
+What is Spring Boot Actuator? How do you enable it?
+How do you handle exceptions in Spring Boot?
+Explain the concept of dependency injection in Spring Boot.
+What are Spring Boot starters?
+How do you configure a database connection in Spring Boot?
+What is the purpose of the @RestController annotation in Spring Boot?
+How do you implement caching in Spring Boot?
+Explain the concept of profiles in Spring Boot.
+What is the purpose of the application.properties or application.yml file in Spring Boot?
+How do you implement security in Spring Boot?
+Explain the concept of Spring Boot annotations: @RequestMapping, @PathVariable, and @RequestParam.
+How do you handle file uploads in Spring Boot?
+What is the difference between @Autowired and @Resource annotations in Spring Boot?
+Explain the concept of AOP (Aspect-Oriented Programming) in Spring Boot.
+How do you implement validation in Spring Boot?
+What is the purpose of the @EnableAutoConfiguration annotation in Spring Boot?
+Explain the concept of Spring Boot Actuator endpoints.
+How do you implement internationalization (i18n) in Spring Boot?
+What is the purpose of the @Configuration annotation in Spring Boot?
+How do you handle transactions in Spring Boot?
+Explain the concept of Spring Boot DevTools.
+How do you implement RESTful services in Spring Boot?
+What is the purpose of the @EnableScheduling annotation in Spring Boot?
+How do you implement asynchronous processing in Spring Boot?
+Explain the concept of JPA (Java Persistence API) in Spring Boot.
+How do you implement Swagger documentation in Spring Boot?
+How do you enable cross-origin resource sharing (CORS) in Spring Boot?
+How do you integrate Spring Boot with Spring Data JPA?
+Explain the concept of Spring Boot's environment profiles.
+What is the purpose of the @EnableCaching annotation in Spring Boot?
+How do you implement message queues in Spring Boot?
+Explain the concept of Spring Boot profiles.
+How do you handle cross-origin requests in Spring Boot?
+What is the purpose of the @Value annotation in Spring Boot?
+How do you implement unit testing in Spring Boot?
+Explain the concept of Spring Boot Actuator health checks.
+How do you implement pagination in Spring Boot?
+What is the purpose of the @EnableJpaRepositories annotation in Spring Boot?
+How do you configure a connection pool in Spring Boot?
+Explain the concept of Spring Boot Actuator metrics.
+How do you implement OAuth2 authentication in Spring Boot?
+What is the purpose of the @EnableConfigurationProperties annotation in Spring Boot?
+How do you implement distributed caching in Spring Boot?
+Explain the concept of Spring Boot Actuator logging.
+How do you deploy a Spring Boot application?
+
+--------- For Experience -----------
+What is Spring Boot's principle of "convention over configuration"?
+How does Spring Boot handle database migrations?
+Explain the concept of embedded servers in Spring Boot.
+How do you customize error pages in Spring Boot?
+What is the purpose of the @EnableAutoConfiguration annotation in Spring Boot?
+How do you handle external configuration in Spring Boot?
+Explain the concept of conditional bean creation in Spring Boot.
+How does Spring Boot support testing?
+What is the purpose of the @EnableWebMvc annotation in Spring Boot?
+How do you implement asynchronous programming with CompletableFuture in Spring Boot?
+Explain the role of the Spring Boot Actuator in monitoring and managing applications.
+How do you implement file downloading in Spring Boot?
+What is the purpose of the @EnableTransactionManagement annotation in Spring Boot?
+Explain the concept of Spring Boot's embedded servlet container.
+How do you implement method-level security in Spring Boot?
+What is the purpose of the @EnableAsync annotation in Spring Boot?
+How do you implement pagination and sorting in Spring Boot?
+Explain the concept of Spring Boot's "runnable" JAR files.
+How do you configure and use a connection pool in Spring Boot?
+What is the purpose of the @ConditionalOnProperty annotation in Spring Boot?
+How do you handle session management in Spring Boot?
+Explain the concept of Spring Boot's "fat JAR" packaging.
+How do you implement content negotiation in Spring Boot?
+What is the purpose of the @EnableScheduling annotation in Spring Boot?
+Explain the concept of Spring Boot's externalized configuration.
+How do you implement method caching in Spring Boot?
+What is the purpose of the @EnableGlobalMethodSecurity annotation in Spring Boot?
+How do you handle form submissions in Spring Boot?
+Explain the concept of Spring Boot's bean scopes.
+How do you implement rate limiting in Spring Boot?
+What is the purpose of the @EnableResourceServer annotation in Spring Boot?
+How do you handle email sending in Spring Boot?
+How do you implement GraphQL in Spring Boot?
+What is the purpose of the @EnableBatchProcessing annotation in Spring Boot?
+How do you handle WebSocket communication in Spring Boot?
+Explain the concept of Spring Boot's metrics collection and monitoring.
+How do you implement distributed tracing in Spring Boot?
+What is the purpose of the @ConditionalOnClass annotation in Spring Boot?
+How do you handle asynchronous events in Spring Boot?
+Explain the concept of Spring Boot's health indicators.
+How do you implement full-text search in Spring Boot?
+What is the purpose of the @ConditionalOnMissingBean annotation in Spring Boot?
+How do you handle data encryption in Spring Boot?
+Explain the concept of Spring Boot's externalized logging configuration.
+How do you implement message-driven communication with Apache Kafka in Spring Boot?
+What is the purpose of the @ConditionalOnExpression annotation in Spring Boot?
+How do you implement distributed transactions in Spring Boot?
+
+
+
+
+

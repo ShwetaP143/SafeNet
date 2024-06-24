@@ -1,0 +1,131 @@
+**HTML:**
+
+1. What is the purpose of the doctype in HTML?
+   - Answer: The doctype declaration is used to specify the version of HTML used in a document.
+
+2. What is the difference between HTML elements and tags?
+   - Answer: HTML elements are individual components, while tags are used to define the structure of those elements within a document.
+
+3. How do you create a hyperlink in HTML?
+   - Answer: Hyperlinks can be created using the `<a>` tag and the `href` attribute.
+
+4. What is the purpose of the `alt` attribute in the `<img>` tag?
+   - Answer: The `alt` attribute is used to provide alternative text for an image if it cannot be displayed.
+
+5. How do you create a table in HTML?
+   - Answer: Tables can be created using the `<table>`, `<tr>`, and `<td>` tags for rows and cells.
+
+**CSS:**
+
+6. What is the purpose of CSS?
+   - Answer: CSS is used to style the layout and appearance of HTML elements on a web page.
+
+7. How do you select an element by its ID in CSS?
+   - Answer: Elements can be selected by their ID using the `#` symbol followed by the ID name.
+
+8. What is the box model in CSS?
+   - Answer: The box model is a design concept in CSS that describes the layout of elements in terms of margins, borders, padding, and content.
+
+9. How do you create a CSS class?
+   - Answer: CSS classes can be created using a period (.) followed by the class name.
+
+10. What is the purpose of the `float` property in CSS?
+    - Answer: The `float` property is used to place an element on the left or right side of its container, allowing text and inline elements to wrap around it.
+
+**Bootstrap:**
+
+11. What is Bootstrap?
+    - Answer: Bootstrap is a popular open-source CSS framework used for creating responsive and mobile-first websites.
+
+12. How do you include Bootstrap in a web page?
+    - Answer: Bootstrap can be included by linking the Bootstrap CSS and JavaScript files in the `<head>` and `<body>` sections of the HTML document, respectively.
+
+13. What is a container in Bootstrap?
+    - Answer: A container is a class in Bootstrap that provides a fixed-width container for content.
+
+14. How do you create a navigation bar in Bootstrap?
+    - Answer: Navigation bars can be created using the `<nav>` and `<ul>` elements along with the appropriate Bootstrap classes.
+
+15. What is the purpose of the grid system in Bootstrap?
+    - Answer: The grid system in Bootstrap is used for creating responsive layouts by organizing content into rows and columns.
+
+**JavaScript:**
+
+16. What is the purpose of JavaScript?
+    - Answer: JavaScript is a programming language used to create interactive and dynamic elements on a web page.
+
+17. What is the difference between `let`, `var`, and `const` in JavaScript?
+    - Answer: `let` and `const` are block-scoped variables, while `var` is function-scoped.
+
+18. How do you declare a variable in JavaScript?
+    - Answer: Variables can be declared using the `var`, `let`, or `const` keywords.
+
+19. What is an event handler in JavaScript?
+    - Answer: An event handler is a function that is executed in response to a specific event occurring in the browser.
+
+20. How do you create a function in JavaScript?
+    - Answer: Functions can be created using the `function` keyword followed by a function name and parameters.
+
+**Mixed:**
+
+21. How do you center an element horizontally in CSS?
+    - Answer: Elements can be centered horizontally using the `margin: 0 auto;` property.
+
+22. What is the purpose of the `z-index` property in CSS?
+    - Answer: The `z-index` property is used to specify the stack order of positioned elements that overlap.
+
+23. How do you include an external JavaScript file in an HTML document?
+    - Answer: JavaScript files can be included using the `<script>` tag with the `src` attribute pointing to the external file.
+
+24. What is a media query in CSS?
+    - Answer: Media queries are a feature of CSS that allow the rendering of web content to adapt to different conditions, such as screen size, resolution, and orientation.
+
+25. How do you create a responsive image in Bootstrap?
+    - Answer: Responsive images can be created using the `img-fluid` class in Bootstrap.
+
+26. What is the purpose of the `onclick` attribute in HTML?
+    - Answer: The `onclick` attribute is used to execute a JavaScript function when an element is clicked.
+
+27. How do you apply CSS styles to an element using its ID in HTML?
+    - Answer: CSS styles can be applied to an element using its ID by selecting the element with the ID and then specifying the desired styles.
+
+28. What is the purpose of the `transition` property in CSS?
+    - Answer: The `transition` property is used to create smooth transitions between different CSS property values.
+
+29. How do you toggle a class in JavaScript?
+    - Answer: Classes can be toggled using the `classList.toggle()` method.
+
+30. What is the purpose of the `flexbox` layout in CSS?
+    - Answer: The `flexbox` layout provides an efficient way to lay out, align, and distribute space among items in a container.
+
+31. How do you create a dropdown menu in Bootstrap?
+    - Answer: Dropdown menus can be created using the appropriate Bootstrap classes and the `<div>` and `<a>` elements.
+
+32. What is the purpose of the `addEventListener` method in JavaScript?
+    - Answer: The `addEventListener` method is used to attach an event handler to an element without overwriting existing event handlers.
+
+33. How do you apply CSS styles to an element using its class in HTML?
+    - Answer: CSS styles can be applied to an element using its class by selecting the class and then specifying the desired styles.
+
+34. How do you create a responsive layout in Bootstrap?
+    - Answer: Responsive layouts can be created using the grid system and responsive utility classes in Bootstrap.
+
+35. What is the purpose of the `innerHTML` property in JavaScript?
+    - Answer: The `innerHTML` property is used to get or set the HTML content of an element.
+
+36. How do you create a form in HTML?
+    - Answer: Forms can be created using the `<form>` tag along with input fields, labels, and a submit button.
+
+37. How do you change the background color of an element using JavaScript?
+    - Answer: The `style.backgroundColor` property can be used to change the background color of an element.
+
+38. What is the purpose of the `outline` property in CSS?
+    - Answer: The `outline` property is used to create an outline around an element, which is similar to a border, but it does not affect the layout of the page.
+
+39. How do you handle form submissions in JavaScript?
+    - Answer: Form submissions can be handled using the `submit` event along with the `preventDefault()` method to prevent the default form submission behavior.
+
+40. What is the purpose of the `onmouseover` event in HTML?
+   
+
+ - Answer: The `onmouseover` event is triggered when the mouse pointer is moved onto an element.
